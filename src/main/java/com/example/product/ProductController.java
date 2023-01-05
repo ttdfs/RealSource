@@ -23,6 +23,7 @@ public class ProductController {
 	// ys 추가
 	@RequestMapping("/index")
 	public String mainhome() {
+		System.out.println("----------/index---");
 		return "index";
 	}
 	
@@ -48,6 +49,13 @@ public class ProductController {
 
 	@RequestMapping("/list")
 	public ModelAndView list(@RequestParam(defaultValue = "") String product_name, ModelAndView mav) {
+		
+		System.out.println("----------/into - list--");
+		
+			
+		System.out.printf("******** --: product_name********:(%s)\n", product_name);
+		System.out.printf("********  --: mav**********:(%s)\n", mav);
+		
 		mav.setViewName("list");
 		mav.addObject("list", productDao.list(product_name));
 		mav.addObject("product_name", product_name);
