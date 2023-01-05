@@ -14,6 +14,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+////------> 01*05 로그 레벨 추가함 ///
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+////<-----   01*05 로그 레벨 추가함 ///
+
+
+
 @Controller
 public class ProductController {
 
@@ -56,6 +68,17 @@ public class ProductController {
 		System.out.printf("******** --: product_name********:(%s)\n", product_name);
 		System.out.printf("********  --: mav**********:(%s)\n", mav);
 		
+		//// ----->   01*05 로그 레벨 추가함 ///
+	//	final Logger LOGGER = LogManager.getLogger(ProductController.class);
+		
+	//    LOGGER.debug("Hello Debug level log");
+     //   LOGGER.info("Hello Info level log");
+    //    LOGGER.error("Hello Error level log");
+		
+        
+         //// <-----   01*05 로그 레벨 추가함 ///
+        
+        
 		mav.setViewName("list");
 		mav.addObject("list", productDao.list(product_name));
 		mav.addObject("product_name", product_name);
