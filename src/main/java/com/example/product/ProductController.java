@@ -32,6 +32,8 @@ public class ProductController {
 	@Autowired
 	ProductDAO productDao;
 
+	
+	/*
 	// ys 추가
 	@RequestMapping("/index")
 	public String mainhome() {
@@ -39,14 +41,51 @@ public class ProductController {
 		return "index";
 	}
 	
+	*/
+	
+	// 부트스프렙 붙인거의 메인 페이지 부분 
+	@RequestMapping("/index")
+	public ModelAndView mainhome(@RequestParam(defaultValue = "") String product_name, ModelAndView mav) {
+		System.out.println("----------/index---");
+		
+		mav.setViewName("index");   //view의 어디에 출력할까
+		mav.addObject("list", productDao.list(product_name));
+		mav.addObject("product_name", product_name);
+		mav.addObject("test_name", "testtt333ttttt");
+		return mav;
+	}
+	
+	@RequestMapping("/testzone")
+	public String testzone() {
+		System.out.println("----------/Into testzone<--------");
+		return "testzone";
+	}
+	
+	
+	@RequestMapping("/buttons")
+	public String Buttons() {
+		System.out.println("----------/Into Buttons<--------");
+		return "buttons";
+	}
+	
+	
+	@RequestMapping("/cards")
+	public String cards() {
+		System.out.println("----------/Into cards<--------");
+		return "cards";
+	}
+	
+	
 	@RequestMapping("/login")
 	public String login() {
+		System.out.println("----------/Into Login<--------");
 		return "login";
 	}
 	
 	
 	@RequestMapping("/register")
 	public String register() {
+		System.out.println("----------/Into register<--------");
 		return "register";
 	}
 	
@@ -79,7 +118,7 @@ public class ProductController {
          //// <-----   01*05 로그 레벨 추가함 ///
         
         
-		mav.setViewName("list");
+		mav.setViewName("list");   //view의 어디에 출력할까
 		mav.addObject("list", productDao.list(product_name));
 		mav.addObject("product_name", product_name);
 		return mav;
