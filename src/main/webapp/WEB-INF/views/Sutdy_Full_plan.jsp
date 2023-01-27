@@ -76,10 +76,10 @@
                         <a class="collapse-item" href="Sutdy_cards">Cards</a>
                     </div>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">전체학습조직:</h6>
-                        <a class="collapse-item" href="Sutdy_Full_plan">전체학습계획</a>                        
+                        <a class="collapse-item active" href="Sutdy_Full_plan">전체학습계획</a>                        
                         <a class="collapse-item" href="Sutdy_Full_Meterial">전체학습자료실</a>
                         <a class="collapse-item" href="Open_Sutdy_Full_Meterial">공개학습자료실</a>
                         <a class="collapse-item" href="Old_Sutdy_Full_Meterial">구_전체학습자료실</a>

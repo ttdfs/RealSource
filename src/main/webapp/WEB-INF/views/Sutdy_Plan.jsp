@@ -71,12 +71,12 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>학습조직</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">우리학습조직:</h6>
-                        <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
+                        <a class="collapse-item active" href="Sutdy_Plan">학습계획</a>                        
                         <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
-                        <a class="collapse-item" href="Sutdy_cards">Cards</a>
+                       
                     </div>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">

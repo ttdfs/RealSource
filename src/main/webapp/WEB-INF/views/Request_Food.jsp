@@ -73,7 +73,7 @@
                         <h6 class="collapse-header">우리학습조직:</h6>
                         <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
                         <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
-                        <a class="collapse-item" href="Sutdy_cards">Cards</a>
+                   
                     </div>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -102,11 +102,11 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>간편식</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="Request_Food">간편식 신청</a>
+                        <a class="collapse-item active" href="Request_Food">간편식 신청</a>
                         <a class="collapse-item" href="utilities-border.html">Borders</a>
                         <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
