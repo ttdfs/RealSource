@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>경영지원 Portal 시스템</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +24,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -35,17 +40,17 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">경영지원PORTAL</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index">
+            <li class="nav-item active">
+                <a class="nav-link" href="Rnd_Cost">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>RnD 예산</span></a>
             </li>
 
             <!-- Divider -->
@@ -53,7 +58,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                학습조직 시스템
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -61,13 +66,31 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>학습조직</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">우리학습조직:</h6>
+                        <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
+                        <a class="collapse-item" href="Sutdy_cards">Cards</a>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">전체학습조직:</h6>
+                        <a class="collapse-item" href="Sutdy_Full_plan">전체학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Full_Meterial">전체학습자료실</a>
+                        <a class="collapse-item" href="Open_Sutdy_Full_Meterial">공개학습자료실</a>
+                        <a class="collapse-item" href="Old_Sutdy_Full_Meterial">구_전체학습자료실</a>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">관리메뉴:</h6>
+                        <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
+                        <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
+                        <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>
                     </div>
                 </div>
             </li>
@@ -77,13 +100,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>간편식</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-color.html">간편식 신청</a>
                         <a class="collapse-item" href="utilities-border.html">Borders</a>
                         <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
@@ -100,23 +123,22 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                    aria-controls="collapsePages">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
-                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="login">Login</a>
+                        <a class="collapse-item" href="register">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
             </li>
@@ -143,6 +165,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+         
         </ul>
         <!-- End of Sidebar -->
 
@@ -356,23 +379,357 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
-                </div>
-                <!-- /.container-fluid -->
 
-            </div>
-            <!-- End of Main Content -->
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+
+
+
+
+
+
+  
+
+
+
+  <table border="0" cellpadding="0" cellspacing="1" align="center" height="137">
+    <tr>
+        <td>
+            <p align="center">
+            	  <a href="s_sch_calender.asp?wdate=2022-12-01"><img src="img/diary_1.jpg" alt="이전달" width="8" height="7" border=0></a>
+                 <font color="592492" size="2"><strong>
+				         <a href="s_sch_calender.asp?wdate=2023-01-27">2023년 1월</a></strong></font>
+				           <a href="s_sch_calender.asp?wdate=2023-02-01"><img src="img/diary_2.jpg" alt="다음달" width="8" height="7" border=0></a>
+				           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./s_sch_all_list.asp">[목록형]</a>
+            </p>
+        </td>
+    </tr>
+    <tr>
+     <td align="center" valign="top" height="114">
+		<table  border="0" align="center" cellpadding="0" cellspacing="1" height="112">
+			 <tr>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="100"><font color="red"><div align='center'>일</font></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="93"><div align='center'>월</div></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="96"><div align='center'>화</div></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="70"><div align='center'>수</div></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="15"><div align='center'>목</div></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="15"><div align='center'>금</div></td>
+		  			<td style="border-bottom-width:1; border-bottom-color:rgb(204,204,204); border-bottom-style:solid;" width="16"><font color="blue"><div align='center'>토</div></font></td>
+		  	  </tr>
+
+      <tr> 
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						 <font color='red'>
+						  <div align='left' valign='top'>
+						  	 1</div>
+							 <div align='left'>							 
+							 
+ 										
+							</div>
+				     </font>
+				   </td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>2</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>3</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>4</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>5</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>6</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='008EC6'>
+							<div align='left'>7</div>
+						  <div align='left'>
+							 
+									
+							</div>
+							</font>
+							</td>
+
+                                      </tr>
+
+      <tr> 
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='red'>
+						<div align='left'>8</div>
+						<div align='left'>
+							 
+									
+							</div>
+						</font>
+					</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>9</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>10</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>11</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>12</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>13</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='008EC6'>
+							<div align='left'>14</div>
+						  <div align='left'>
+							 
+									
+							</div>
+							</font>
+							</td>
+
+                                      </tr>
+
+      <tr> 
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='red'>
+						<div align='left'>15</div>
+						<div align='left'>
+							 
+									
+							</div>
+						</font>
+					</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>16</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>17</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>18</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>19</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>20</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						 <font color='red'>
+						  <div align='left' valign='top'>
+						  	 21</div>
+							 <div align='left'>							 
+							 
+ 										
+							</div>
+				     </font>
+				   </td>
+
+                                      </tr>
+
+      <tr> 
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						 <font color='red'>
+						  <div align='left' valign='top'>
+						  	 22</div>
+							 <div align='left'>							 
+							 
+ 										
+							</div>
+				     </font>
+				   </td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						 <font color='red'>
+						  <div align='left' valign='top'>
+						  	 23</div>
+							 <div align='left'>							 
+							 
+ 										
+							</div>
+				     </font>
+				   </td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>24</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>25</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>26</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>27</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='008EC6'>
+							<div align='left'>28</div>
+						  <div align='left'>
+							 
+									
+							</div>
+							</font>
+							</td>
+
+                                      </tr>
+
+      <tr> 
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<font color='red'>
+						<div align='left'>29</div>
+						<div align='left'>
+							 
+									
+							</div>
+						</font>
+					</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>30</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+
+					<td width="100" bgcolor='ECEBEF' height="88" style='cursor:hand' valign='top'>
+						<div align='left'>31</div>
+						<div align='left'>
+
+							 
+							</div>
+						</td>
+<td width='50' height='35'>&nbsp;</td><td width='50' height='35'>&nbsp;</td><td width='50' height='35'>&nbsp;</td><td width='50' height='35'>&nbsp;</td>
+                                      </tr>
+
+
+			</table>
+		</td>
+    </tr>
+</table>
+
+  <!--   ---------------------------------------------------------------------------------- 
+
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -418,6 +775,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

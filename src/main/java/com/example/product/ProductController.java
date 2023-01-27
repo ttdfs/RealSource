@@ -61,7 +61,82 @@ public class ProductController {
 		return "testzone";
 	}
 	
+	@RequestMapping("/Rnd_Cost")
+	public String Rnd_Cost() {
+		System.out.println("----------/Into testzone<--------");
+		return "Rnd_Cost";
+	}
 	
+	//////////////////
+	@RequestMapping("/Sutdy_Plan")
+	public String Sutdy_Plan() {
+		System.out.println("----------/Into Sutdy_Plan<--------");
+		return "Sutdy_Plan";
+	}
+	
+	@RequestMapping("/Sutdy_Meterial")
+	public String Sutdy_Meterial() {
+		System.out.println("----------/Into Sutdy_Meterial<--------");
+		return "Sutdy_Meterial";
+	}
+	
+	@RequestMapping("/Sutdy_cards")
+	public String Sutdy_cards() {
+		System.out.println("----------/Into Sutdy_cards<--------");
+		return "Sutdy_cards";
+	}
+	
+	@RequestMapping("/Sutdy_Full_plan")
+	public String Sutdy_Full_plan() {
+		System.out.println("----------/Into Sutdy_Full_plan<--------");
+		return "Sutdy_Full_plan";
+	}
+	
+	@RequestMapping("/Sutdy_Full_Meterial")
+	public String Sutdy_Full_Meterial() {
+		System.out.println("----------/Into Sutdy_Full_Meterial<--------");
+		return "Sutdy_Full_Meterial";
+	}
+	
+	@RequestMapping("/Open_Sutdy_Full_Meterial")
+	public String Open_Sutdy_Full_Meterial() {
+		System.out.println("----------/Into Open_Sutdy_Full_Meterial<--------");
+		return "Open_Sutdy_Full_Meterial";
+	}
+	
+	@RequestMapping("/Old_Sutdy_Full_Meterial")
+	public String Old_Sutdy_Full_Meterial() {
+		System.out.println("----------/Into Old_Sutdy_Full_Meterial<--------");
+		return "Old_Sutdy_Full_Meterial";
+	}
+	
+	@RequestMapping("/Mng_Study_org")
+	public String Mng_Study_org() {
+		System.out.println("----------/Into Mng_Study_org<--------");
+		return "Mng_Study_org";
+	}
+	
+	@RequestMapping("/Mng_Study_Meterial")
+	public String Mng_Study_Meterial() {
+		System.out.println("----------/Into Mng_Study_Meterial<--------");
+		return "Mng_Study_Meterial";
+	}
+	
+	@RequestMapping("/Request_Study_quest")
+	public String Request_Study_quest() {
+		System.out.println("----------/Into Request_Study_quest<--------");
+		return "Request_Study_quest";
+	}
+	
+	@RequestMapping("/Request_Food")
+	public String Request_Food() {
+		System.out.println("----------/Into Request_Food<--------");
+		return "Request_Food";
+	}
+	
+	
+	
+	////////////////////
 	@RequestMapping("/buttons")
 	public String Buttons() {
 		System.out.println("----------/Into Buttons<--------");

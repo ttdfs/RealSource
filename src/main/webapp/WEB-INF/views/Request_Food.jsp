@@ -395,347 +395,272 @@
 
 
 
-
-
-
-
-
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard<------</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  <div class="aspNetHidden">
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTk0OTUwODQxD2QWAmYPZBYKAgEPDxYCHgRUZXh0BRlDb25uZWN0ZWQgOiAxMC4yNDkuMjQuMTMyZGQCBw8WBB4ISW50ZXJ2YWwC6AceB0VuYWJsZWRnZAILDw8WAh8ABQ3rgqjsnYAg7IiY65+JZGQCDQ9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAICFgRmD2QWDAIBDw8WAh4ISW1hZ2VVcmwFC2ltZy8wMDEucG5nZGQCAw8PFgIfAAUFNDUvNTBkZAIEDxUBAzAwMWQCBQ8PFgIfAAUM7KaJ7ISd7L2U64SIZGQCBg8VAQMwMDFkAgcPDxYCHwBlZGQCAQ9kFgwCAQ8PFgIfBAULaW1nLzAwMi5wbmdkZAIDDw8WAh8ABQQwLzUwZGQCBA8VAQMwMDJkAgUPDxYCHwAFD+qwhO2OuOyLney9lOuEiGRkAgYPFQEDMDAyZAIHDw8WAh8AZWRkAhMPFgIfAwICFgRmD2QWCgIBDw8WAh8EBQtpbWcvMDAxLnBuZ2RkAgIPFQEDMDAxZAIDDw8WAh8ABQzsponshJ3svZTrhIhkZAIEDxUBAzAwMWQCBQ8PFgIfAGVkZAIBD2QWCgIBDw8WAh8EBQtpbWcvMDAyLnBuZ2RkAgIPFQEDMDAyZAIDDw8WAh8ABQ/qsITtjrjsi53svZTrhIhkZAIEDxUBAzAwMmQCBQ8PFgIfAGVkZGRqSfP/wfxfRuTNWyM0nFDx8+LKkzIYxGAMfI5FU551pQ==" />
+    </div>
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    var theForm = document.forms['form1'];
+    if (!theForm) {
+        theForm = document.form1;
+    }
+    function __doPostBack(eventTarget, eventArgument) {
+        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+        }
+    }
+    //]]>
+    </script>
+    
+    
+    <script src="/WebResource.axd?d=xdr-IoWgZut-g7j3H2fPEr99_dJ6dlD9R2JXopYwW4KIb1E6spp3dmH3mszW_39hrJULWJmYfG_GQi5cfA2T4S5MsgjO3kt6FOg7Ve7WoqM1&amp;t=637696606958594948" type="text/javascript"></script>
+    
+    
+    <script src="/ScriptResource.axd?d=0f4djPaKktK7S7r5HbeIAJX2eFE0nprSPkh9YED4F82D-MtSq4XQpz1jy2m8H9A2h8xswihiq57NLv04f_hcvryqnWJDfhGBaf_AEA_aaGW1RA9sDGZT45ZXzQ74rUGui8mFx2TU4OYhq-oSLHfF0EPXwvDlinl8l48oVhUWvtvMlUJi_15Q2lCPjBnRa9-y0&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
+    //]]>
+    </script>
+    
+    <script src="/ScriptResource.axd?d=-Ts7hJl5A9C4hsARmnEv8hJt2gJvo90XypTba9zH4LQ-Btyeu8Dud1GlNBflXr-WFQqoAbfYlXIpVsdBfdKfxW2nI6JbGR_NF1mm5bgWBXyTpnzT3G6Kv-0Sa0iYTOwKcNzrKGJSjbQuK6EY9VGLsb_bcyLbmbsVq6vT8Gf8Pm2om28ZM8FcK98Y5jSF4Y3Z0&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+    <script src="/ScriptResource.axd?d=J9_66vGjPhLkukWn9bufv2GMYfuUWtitdOfJu_ZoTN2GalVrwaZt5p89v68I082WzgqeZbIpaEkYEfun6DIsj4nBrIrpXnzJ5XJ1IS5nLgG8LIoovikuBnNY5njqbBSud7-ybNaKk4Yu2vhkLcsJ6p4TuoZWc7M_4ZLbwepaXVFRNgVS4ei973LR61L55IK10&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+    <div class="aspNetHidden">
+    
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="147489A5" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZg4FgZbUqYLIL1S6LCba1slliAPKY+KvRmniYVjNuQiG1G0Qm+LLQpkyMzYKWon2NiEzRKmoaXqxD1ZDMcXvMuZ0GMYuWV8RTYGatvtfJi5ubbaobOintImIY7q6VqZK/bKZsxwaqvYX5apFJnfGpybo4di3qC3H7TvMTArDg+AQ==" />
+    </div>
+            <div>
+                <div class="preloader">
+                    <div class="loader">
+                        <div class="loader__figure"></div>
+                        <p class="loader__label">간편식</p>
                     </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+                <div id="main-wrapper">    
+                    <div class="topbar">
+                        <div class="header6">
+                            <div class="container po-relative">             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-wrapper">
+                        <div class="container-fluid">
+                            <div class="banner-innerpage" style="background-image:url(assets/images/innerpage/banner-bg4.jpg)">
+                                <div class="container">
+                                    <div class="row justify-content-center ">
+                                        <div class="col-md-6 align-self-center text-center" data-aos="fade-down" data-aos-duration="1200">
+                                            <h1 class="title">식사 예약 시스템</h1>
+                                            <h3><span id="ipadd" style="color:White;">Connected : 10.249.24.132</span></h3>
+                                            <h3 class="subtitle op-8">
+                                                <script type="text/javascript">
+    //<![CDATA[
+    Sys.WebForms.PageRequestManager._initialize('scrpt', 'form1', ['tUpdatePanel1','UpdatePanel1','tUpdatePanel2','UpdatePanel2'], ['Timer1','Timer1','Timer2','Timer2'], [], 90, '');
+    //]]>
+    </script>
+    
+                                                 <!-------------------------- update -1 ------------------------------------------->
+                                                <div id="UpdatePanel1">
+        
+                                                         &nbsp;<p><span id="Label1"></span></p>
+                                                        &nbsp;<span id="Label2" style="font-size:XX-Large;"></span>
+                                                    
+    </div>
+                                                <span id="Timer1" style="visibility:hidden;display:none;"></span> 
+                                                 <!-------------------------- update -1 ------------------------------------------->
+                                            </h3>
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <div class="alert alert-info m-b-0">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                                <h3 class="text-info"><i class="fa fa-exclamation-circle"></i> 진위 사업장 간편식 예약 안내</h3>
+                                <div class="row"> 
+                                    <div class="col-6">
+                                        <div style="padding-left:30px;">
+                                            <p># 이용 대상 : 진위 근무 임직원 (또는 당일 진위 방문 임직원)</p> 
+                                            <p># 이용 장소 : 진위 9층 식당</p> 
+                                            <p class="text-danger"># 예약 시간 :당일 오전 09시 ~ <u>10시 30분</u> (취소는 10시 30분까지)</p> 
+                                            <p># 기타 사항 : 중식 간편식 이용 시, 구내 식당 중복 식사 불가</p> 
+                                            <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;식사 조별 배식 시간을 준수하여 주세요 (미리 줄서기 금지)</p>-->
                                         </div>
                                     </div>
+                                    <div class="col-6" style="color:dodgerblue">
+                                        <p>  # 예약 하신 분만 이용 가능 </p>
+                                        <p>  # 잔여분은 현장에서만 확인 후 이용가능 </p>
+                                    </div> 
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                            </div>       
+                            <div class="spacer">
+                                <div class="container">
+                                    <!-- Row -->
+                                    <div class="row justify-content-center">                                    
+                                        <div class="col-md-12 text-center">                                
+                                            <h3 class="text-muted font-15 text-uppercase"><span id="lbmenu">남은 수량</span> </h3>
+                                            <br />     
+                                            <!-------------------------- update -2 ------------------------------------------->
+                                            <div id="UpdatePanel2">
+           
+                                                    <table style="width:100%">
+                                                       <tr>                                           
+                                                              
+                                                                    <td>
+                                                                        <div class="">
+                                                                            <div class="">
+                                                                                <div class="display-5">
+                                                                                    <img id="Repeater1_menu_img_0" src="img/001.png" style="width:250px;" />
+                                                                                </div>
+                                                                                <div class="">
+                                                                                    <h2 class="font-light counter m-b-0">
+                                                                                        <span id="Repeater1_label3_0">45/50</span>
+                                                                                    </h2>
+                                                                                    
+                                                                                    <h5 class="font-15 text-uppercase text_001">
+                                                                                        <span id="Repeater1_label1_0">즉석코너</span>
+                                                                                    </h5>
+                                                                                    <h5 class="font-15 text-uppercase text_001">
+                                                                                        <span id="Repeater1_label4_0"></span>
+                                                                                    </h5>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                                                                    
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <div class="">
+                                                                            <div class="">
+                                                                                <div class="display-5">
+                                                                                    <img id="Repeater1_menu_img_1" src="img/002.png" style="width:250px;" />
+                                                                                </div>
+                                                                                <div class="">
+                                                                                    <h2 class="font-light counter m-b-0">
+                                                                                        <span id="Repeater1_label3_1">0/50</span>
+                                                                                    </h2>
+                                                                                    
+                                                                                    <h5 class="font-15 text-uppercase text_002">
+                                                                                        <span id="Repeater1_label1_1">간편식코너</span>
+                                                                                    </h5>
+                                                                                    <h5 class="font-15 text-uppercase text_002">
+                                                                                        <span id="Repeater1_label4_1"></span>
+                                                                                    </h5>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                                                                    
+                                                                    </td>
+                                                                                                                    
+                                                        </tr>
+                                                    </table>
+                                                
+    </div>
+                                            <span id="Timer2" style="visibility:hidden;display:none;"></span>   
+                                            <!-------------------------- update -2 ------------------------------------------->   
+                                            <br />
+                                            <div style="font-size:30px;padding:10px;">
+                                                <span id="apply_menu"></span>
                                             </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <!-- Row -->
+                                    <div class="row wrap-feature-24">
+                                        <!-- Column -->
+                                        
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="card card-shadow">
+                                                        <a href="javascript:void(0)" class="service-24"> 
+                                                            <img id="Repeater2_menu_img_0" src="img/001.png" style="width:250px;" />
+                                                            <h6 class="ser-title text_001">
+                                                                <span id="Repeater2_menu_nm_0">즉석코너</span>
+                                                            </h6>
+                                                            <h6 class="ser-title text_001">
+                                                                <span id="Repeater2_Label5_0"></span>
+                                                            </h6>
+                                                        </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+                                            
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="card card-shadow">
+                                                        <a href="javascript:void(0)" class="service-24"> 
+                                                            <img id="Repeater2_menu_img_1" src="img/002.png" style="width:250px;" />
+                                                            <h6 class="ser-title text_002">
+                                                                <span id="Repeater2_menu_nm_1">간편식코너</span>
+                                                            </h6>
+                                                            <h6 class="ser-title text_002">
+                                                                <span id="Repeater2_Label5_1"></span>
+                                                            </h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            
+                                        <div class="col-md-12 m-t-20 text-center">   
+                                            <a class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#" onclick="return btn_1();">
+                                                <span>신 청 <i class="ti-arrow-right"></i></span>
+                                            </a>&nbsp;&nbsp;
+                                            <a class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#f24" onclick="return btn_2()">
+                                                <span>취 소 <i class="ti-arrow-right"></i></span>
+                                            </a> 
+                                            <span id="test"></span>
+                                        </div>  
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
-                <!-- /.container-fluid -->
-
+            </div>      
+            <a class="bt-top btn btn-circle btn-lg btn-info" href="#top">
+                <i class="ti-arrow-up"></i>
+            </a>
+            <div class="footer4 spacer b-t">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 m-b-30">
+                            <h5 class="m-b-20">Address</h5>
+                            <p>75, Jinwisandan-ro, Jinwi-myeon, Pyeongtaek-si, Gyeonggi-do, Republic of Korea</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 m-b-30">
+                            <h5 class="m-b-20">Phone</h5>
+                            <p>TEL : +82-31-8047-7000
+                                
+                        </div>
+                        <div class="col-lg-3 col-md-6 m-b-30">
+                            <h5 class="m-b-20">Email</h5>
+                            <p>Office : 총무팀@wonik.com
+    
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="m-b-20">Intranet</h5>
+                            <div class="round-social light">
+                                <a href="https://gw.wonik.com" class="link" title="그룹웨어"><i class="fa fa-group"></i></a>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f4-bottom-bar">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex font-14">
+                                    <div class="m-t-10 m-b-10 copyright">All Rights Reserved by WONIKIPS.</div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- End of Main Content -->
 
-            <!-- Footer -->
+
+            
+<!---------------------------------->
+  <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">

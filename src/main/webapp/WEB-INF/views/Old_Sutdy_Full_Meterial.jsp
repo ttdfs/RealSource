@@ -398,343 +398,408 @@
 
 
 
+  <div align="left">
+    <form name="form"   method="post" action="s_dat_open_s_list.asp">
+    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="865">
+                <tr>
+            <td class="tb_bottom" width="22" height="37">
+                <p align="center"><img src="../img/bullet_01.gif" width="9" height="18" border="0"></p>
+            </td>
+            <td width="133" height="37" class="tb_bottom"><b><font size="2" color="#3B608D">학습자료현황</font></b></td>
+                    <td width="100" height="37" class="tb_bottom">
+                                &nbsp;
+                     </td>
+                    <td width="91" height="37" class="tb_bottom">
+                                    &nbsp;
+                    </td>
+                    <td width="519" height="37" class="tb_bottom">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="865" height="32" class="tb_bottom" colspan="5">
+                        <table cellpadding="0" cellspacing="0" height="26" width="847">
+                            <tr>
+                                <td width="82" height="26">
+                                    <p align="center">제 목</p>
+                                </td>
+                                <td width="194" height="26">&nbsp;
+                                                          &nbsp;<input type="text" name="str_d_title_s" size="20">
+                                </td>
+                                <td width="58" height="26">
+                                                &nbsp;<input type="submit" name="str_button" value="검 색">
+                                </td>
+                                <td width="20" height="26">&nbsp;</td>
+                                <td width="17" height="26">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+    
+    </table>
+    <table border="0" width="866" height="84" cellspacing="0">
+                <tr>
+                    <td class="bdTop_section" width="55"   height="26">
+                        <p align="center"><b><font color="#3B608D">NO</font></b></p>
+                    </td>
+                    <td width="92" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">진행일</font></b></p>
+                    </td>
+                    <td width="69" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">분류</font></b></p>
+                    </td>
+                    <td width="344" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">학습제목</font></b></p>
+                    </td>
+                    <td class="bdTop_section"  width="147" height="26">
+                        <p align="center"><b><font color="#3B608D">학습조직명</font></b></p>
+                    </td>
+                    <td class="bdTop_section" width="84" height="26">
+                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
+                    </td>
+                    <td class="bdTop_section" width="61" height="26">
+                        <p align="center"><b><font color="#3B608D">진행자</font></b></p>
+                    </td>
+                </tr>
+        <tr>
+                            <td class="bdTop_line" width="55" height="1"></td>
+                    <td width="92" height="1" class="bdTop_line"></td>
+                    <td width="69" height="1" class="bdTop_line"></td>
+                    <td width="344" height="1" class="bdTop_line"></td>
+                    <td width="147" height="1" class="bdTop_line"></td>
+                    <td width="84" height="1" class="bdTop_line"></td>
+                    <td width="61" height="1" class="bdTop_line"></td>
+        </tr>
+        <tr>
+                            <td class="bdTop_shadow" width="55" height="2"></td>
+                    <td width="92" height="2" class="bdTop_shadow"></td>
+                    <td width="69" height="2" class="bdTop_shadow"></td>
+                    <td width="344" height="2" class="bdTop_shadow"></td>
+                    <td width="147" height="2" class="bdTop_shadow"></td>
+                    <td width="84" height="2" class="bdTop_shadow"></td>
+                    <td width="61" height="2" class="bdTop_shadow"></td>
+        </tr> 
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">26</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-10-24</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=19418&str_d_level=D&page=1">
+                                    공개학습조직 결과보고 10월 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">반도체1사업본부/SEC영업팀/영업3P</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">부품지원 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">장석진</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">25</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-10-04</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=19407&str_d_level=A&page=1">
+                                    [9월 8회차] 빛을 활용한 두께 측정, 기초에서 심화까지 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">반도체연구소 신제품개발실 개발2팀 PF P</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">공정개발 G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김동학</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">24</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-28</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18387&str_d_level=D&page=1">
+                                    반도체 장비 Concept 설계시 고려사항 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김일경</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">23</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-27</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18381&str_d_level=A&page=1">
+                                    [공개학습조직]빛을 활용한 두께 측정 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김동학</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">22</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-27</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18383&str_d_level=D&page=1">
+                                    반도체 장비 Concept 설계시 고려사항 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김일경</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">21</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-27</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18384&str_d_level=D&page=1">
+                                    반도체 장비 Concept 설계시 고려사항 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김일경</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">20</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-26</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18367&str_d_level=C&page=1">
+                                    [공개학습조직] 예측진단을 통한 사전오류 대처능력 향상 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김수빈</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">19</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-26</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18375&str_d_level=C&page=1">
+                                    [공개학습조직] 예측진단을 통한 사전오류 대처능력 향상 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김다운</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">18</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-24</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18361&str_d_level=A&page=1">
+                                    [공개학습조직] 빛을 활용한 두께 측정 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">구매의 길</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">구매 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">김동학</p>
+            </td>
+        </tr>
+        
+         
+         <tr>
+            <td class="tb_mid4" width="55" height="26">
+                <p align="center">17</p>
+            </td>
+            <td width="92" height="26" class="tb_mid4">
+                <p align="center">2019-09-20</p>
+            </td>
+            <td width="69" height="26" class="tb_mid4">
+                <p align="center">공개학습</p>
+            </td>
+            <td width="344" height="26" class="tb_mid4">
+                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18352&str_d_level=D&page=1">
+                                    공개학습조직 결과보고 9월 
+                                </a>
+                       &nbsp;
+                                               <img src="../img/Toolbar-save.gif"  border="0">
+                                       
+            </td>
+            <td class="tb_mid4" width="147" height="26">
+                <p align="center">반도체1사업본부/SEC영업팀/영업3P</p>
+            </td>
+            <td class="tb_mid4" width="84" height="26">
+                <p align="center">부품지원 1G</p>
+            </td>
+            <td class="tb_mid4" width="61" height="26">
+                <p align="center">장석진</p>
+            </td>
+        </tr> 
+        
+       
+          
+        <tr>
+             <td width="864" height="28" class="tb_bottom" colspan="7">
+                 <p align="center">&nbsp;
+               
+             
+                        [<font color="blue">1</font>]
+                     
+                        [<a href="s_dat_all_list.asp?page=2">2</a>]
+                     
+                        [<a href="s_dat_all_list.asp?page=3">3</a>]
+                                      
+                 </p>
+             </td>
+         </tr>
+    </table>
+    </form>
+    </div>
 
 
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard<------</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
+<------------------------------------------------------------------------------------
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">

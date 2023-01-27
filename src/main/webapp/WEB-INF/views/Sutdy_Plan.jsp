@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>경영지원 Portal 시스템</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +24,10 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
+
+    
 </head>
 
 <body id="page-top">
@@ -35,17 +43,17 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">경영지원PORTAL</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index">
+            <li class="nav-item active">
+                <a class="nav-link" href="Rnd_Cost">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>RnD 예산</span></a>
             </li>
 
             <!-- Divider -->
@@ -53,7 +61,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                학습조직 시스템
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -61,13 +69,31 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>학습조직</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">우리학습조직:</h6>
+                        <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
+                        <a class="collapse-item" href="Sutdy_cards">Cards</a>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">전체학습조직:</h6>
+                        <a class="collapse-item" href="Sutdy_Full_plan">전체학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Full_Meterial">전체학습자료실</a>
+                        <a class="collapse-item" href="Open_Sutdy_Full_Meterial">공개학습자료실</a>
+                        <a class="collapse-item" href="Old_Sutdy_Full_Meterial">구_전체학습자료실</a>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">관리메뉴:</h6>
+                        <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
+                        <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
+                        <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>
                     </div>
                 </div>
             </li>
@@ -77,13 +103,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>간편식</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-color.html">간편식 신청</a>
                         <a class="collapse-item" href="utilities-border.html">Borders</a>
                         <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
@@ -100,23 +126,22 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                    aria-controls="collapsePages">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
-                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="login">Login</a>
+                        <a class="collapse-item" href="register">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
             </li>
@@ -143,6 +168,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+         
         </ul>
         <!-- End of Sidebar -->
 
@@ -356,23 +382,224 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
-                </div>
-                <!-- /.container-fluid -->
 
-            </div>
-            <!-- End of Main Content -->
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+  <div align="left">
+    <form name="form"   method="post" action="s_sch_s_list.asp">
+    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="1127">
+                <tr>
+            <td class="tb_bottom" width="22" height="37">
+                <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
+            </td>
+            <td width="133" height="37" class="tb_bottom"><b><font size="2" color="#3B608D">학습계획현황</font></b></td>
+                    <td width="100" height="37" class="tb_bottom">
+                                &nbsp;
+                     </td>
+                    <td width="91" height="37" class="tb_bottom">
+                                    &nbsp;
+                    </td>
+                    <td width="781" height="37" class="tb_bottom">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="1127" height="32" class="tb_bottom" colspan="5">
+                        <table cellpadding="0" cellspacing="0" height="26" width="1109">
+                            <tr>
+                                <td width="32" height="26">&nbsp;</td>
+                                <td width="73" height="26">
+                                    <p align="center">사업부</p>
+                                </td>
+                                <td width="80" height="26">
+                                                                        &nbsp;
+                                                               <select name="str_s_saubu_s" size="1">
+                                                                           <option value="">전체</option>
+                                                                            
+                                                                        <option value="S0110">경영전략부문</option>
+                                                                            
+                                                                        <option value="S0115">구매부문</option>
+                                                                            
+                                                                        <option value="S0120">재무부문</option>
+                                                                            
+                                                                        <option value="S0125">인사부문</option>
+                                                                            
+                                                                        <option value="S0130">해외영업팀</option>
+                                                                            
+                                                                        <option value="S0135">환경안전팀</option>
+                                                                            
+                                                                        <option value="S0140">품질보증팀</option>
+                                                                            
+                                                                        <option value="S0145">반도체사업총괄</option>
+                                                                            
+                                                                        <option value="S0150">Diffusion 사업총괄</option>
+                                                                            
+                                                                        <option value="S0155">반도체연구소</option>
+                                                                            
+                                                                        <option value="S0160">Display사업총괄</option>
+                                                                            
+                                                                        <option value="S0165">SEC영업1본부</option>
+                                                                            
+                                                                        <option value="S0170">SEC영업2본부</option>
+                                                               
+                                            </select> 			
+                                                            </td>
+                                <td width="63" height="26">
+                                    <p align="center">분류</p>
+                                </td>
+                                <td width="79" height="26">
+                                                                            &nbsp;
+                                                               <select name="str_s_kind_s" size="1">
+                                                                                   <option value="">전체</option>
+                                                                            
+                                                                        <option value="B0020">개발</option>
+                                                                            
+                                                                        <option value="B0030">구매</option>
+                                                                            
+                                                                        <option value="B0042">품질</option>
+                                                                            
+                                                                        <option value="B0044">C/S</option>
+                                                                            
+                                                                        <option value="B0055">사업기획</option>
+                                                                            
+                                                                        <option value="B0065">R&D</option>
+                                                                            
+                                                                        <option value="B0070">영업</option>
+                                                                            
+                                                                        <option value="B0080">인사</option>
+                                                                            
+                                                                        <option value="B0090">재무</option>
+                                                                            
+                                                                        <option value="B0101">제조</option>
+                                                                            
+                                                                        <option value="B0105">준법</option>
+                                                                            
+                                                                        <option value="B0120">환경</option>
+                                                                            
+                                                                        <option value="B0130">정보</option>
+                                                                            
+                                                                        <option value="B0999">공개학습</option>
+                                                               
+                                            </select> 																		
+                                                            </td>
+                                <td width="65" height="26">
+                                    <p align="center">진행자</p>
+                                </td>
+                                <td width="78" height="26">
+                                                                                        &nbsp;<input type="text" name="leader_nm_s" size="7">
+                                                        </td>
+                                <td width="80" height="26">
+                                    <p align="center">제 목</p>
+                                </td>
+                                <td width="173" height="26">&nbsp;
+                                                          &nbsp;<input type="text" name="str_s_title_s" size="20">
+                                </td>
+                                <td width="64" height="26">
+                                    <p align="center">                            	            계획월</p>
+                                </td>
+                                <td width="78" height="26">&nbsp;&nbsp;</td>
+                                <td width="62" height="26">&nbsp;</td>
+                                <td width="182" height="26">&nbsp;<input type="submit" name="str_button" value="검 색">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+    
+    </table>
+    <table border="0" width="1127" height="84" cellspacing="0">
+                <tr>
+                    <td class="bdTop_section" width="55"   height="26">
+                        <p align="center"><b><font color="#3B608D">NO</font></b></p>
+                    </td>
+                    <td width="92" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">계획일</font></b></p>
+                    </td>
+                    <td width="108" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">계획시간</font></b></p>
+                    </td>
+                    <td width="151" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">장소</font></b></p>
+                    </td>
+                    <td width="49" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">분류</font></b></p>
+                    </td>
+                    <td width="350" height="26" class="bdTop_section">
+                        <p align="center"><b><font color="#3B608D">학습제목</font></b></p>
+                    </td>
+                    <td class="bdTop_section"  width="124" height="26">
+                        <p align="center"><b><font color="#3B608D">학습조직명</font></b></p>
+                    </td>
+                    <td class="bdTop_section" width="115" height="26">
+                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
+                    </td>
+                    <td class="bdTop_section" width="65" height="26">
+                        <p align="center"><b><font color="#3B608D">진행자</font></b></p>
+                    </td>
+                </tr>
+        <tr>
+                            <td class="bdTop_line" width="55" height="1"></td>
+                    <td width="92" height="1" class="bdTop_line"></td>
+                    <td width="108" height="1" class="bdTop_line"></td>
+                    <td width="151" height="1" class="bdTop_line"></td>
+                    <td width="49" height="1" class="bdTop_line"></td>
+                    <td width="350" height="1" class="bdTop_line"></td>
+                    <td width="124" height="1" class="bdTop_line"></td>
+                    <td width="115" height="1" class="bdTop_line"></td>
+                    <td width="65" height="1" class="bdTop_line"></td>
+        </tr>
+        <tr>
+                            <td class="bdTop_shadow" width="55" height="2"></td>
+                    <td width="92" height="2" class="bdTop_shadow"></td>
+                    <td width="108" height="2" class="bdTop_shadow"></td>
+                    <td width="151" height="2" class="bdTop_shadow"></td>
+                    <td width="49" height="2" class="bdTop_shadow"></td>
+                    <td width="350" height="2" class="bdTop_shadow"></td>
+                    <td width="124" height="2" class="bdTop_shadow"></td>
+                    <td width="115" height="2" class="bdTop_shadow"></td>
+                    <td width="65" height="2" class="bdTop_shadow"></td>
+        </tr> 
+       
+          
+        <tr>
+             <td width="1125" height="28" class="tb_bottom" colspan="9">
+                 <p align="center">&nbsp;
+                              
+                 </p>
+             </td>
+         </tr>
+    </table>
+    </form>
+    </div>
+
+
+
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -418,6 +645,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
