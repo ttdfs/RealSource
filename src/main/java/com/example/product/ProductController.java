@@ -47,6 +47,8 @@ public class ProductController {
 	@RequestMapping("/index")
 	public ModelAndView mainhome(@RequestParam(defaultValue = "") String product_name, ModelAndView mav) {
 		System.out.println("----------/index---");
+		System.out.println("----------/product_name---:: "+product_name);
+		
 		
 		mav.setViewName("index");   //view의 어디에 출력할까
 		mav.addObject("list", productDao.list(product_name));

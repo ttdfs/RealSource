@@ -15,16 +15,117 @@
     <meta name="author" content="">
 
     <title>경영지원 Portal 시스템</title>
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <link href="assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link href="assets/node_modules/aos/dist/aos.css" rel="stylesheet"> -->
+    <link href="assets/node_modules/prism/prism.css" rel="stylesheet">
+    <link href="assets/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="css/features/features21-30.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Jua&display=swap" rel="stylesheet">  
+     <!-- <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> -->
+     <!-- <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
+
+
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet"> 
+     <link href="css/style.css" rel="stylesheet">
+     <!--  <link rel="stylesheet" type="text/css" href="css/food_style.css"> -->
+
+     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+     <script>
+
+            var index = "";
+
+            $(document).ready(function(){
+            
+                $(".service-24").click(function () {
+                
+                    index = $(".service-24").index(this)+1;
+                                
+                });
+            });
+
+            function btn_1()
+            {  
+                alert("index의 수"+index);
+                if (!index)
+                {
+                    alert("메뉴를 선택해주세요");
+                    return false;
+
+                }
+                else {
+
+                var apply_menu = document.getElementById('apply_menu').innerText;     
+
+                alert("apply_menu"+apply_menu); 
+
+                    if (apply_menu == "") { 
+
+                        var result = confirm("간편식을 예약하시겠습니까??");
+
+                        if (result == true) {
+
+                            var myHidden = document.getElementById('HiddenField1');
+
+                            alert("myHidden ===> "+myHidden); 
+
+                            myHidden.value = index;
+                         
+                            // dopostBack은 save하는 것
+                        //    __doPostBack('btnSave','')
+
+                        }
+                    }
+                    else {
+
+                        alert("이미 예약한 상태입니다.");
+
+                        return false();
+
+                    }
+                }
+
+            }
+
+            function btn_2()
+            {
+                var apply_menu = document.getElementById('apply_menu').innerText; 
+
+                if (apply_menu == "")
+                {
+
+                    alert("예약한 내역이 없어 취소 할 수 없습니다.");
+
+                    return false();
+
+                }
+                else
+                {
+
+                    var result = confirm("예약한 내역을 취소하시겠습니까?");
+
+                    if (result == true) {
+
+                         // dopostBack은 save하는 것
+                      //  __doPostBack('btncancel','')
+
+                    }
+
+                }
+            }
+     </script>
+
+
 </head>
 
 <body id="page-top">
@@ -168,278 +269,19 @@
          
         </ul>
         <!-- End of Sidebar -->
-
+vv333vv  
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
+yyy
             <!-- Main Content -->
             <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-
-
-
-
-
-
-
-  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
-
-
-
-
-
-
-
-
-  <div class="aspNetHidden">
-    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTk0OTUwODQxD2QWAmYPZBYKAgEPDxYCHgRUZXh0BRlDb25uZWN0ZWQgOiAxMC4yNDkuMjQuMTMyZGQCBw8WBB4ISW50ZXJ2YWwC6AceB0VuYWJsZWRnZAILDw8WAh8ABQ3rgqjsnYAg7IiY65+JZGQCDQ9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAICFgRmD2QWDAIBDw8WAh4ISW1hZ2VVcmwFC2ltZy8wMDEucG5nZGQCAw8PFgIfAAUFNDUvNTBkZAIEDxUBAzAwMWQCBQ8PFgIfAAUM7KaJ7ISd7L2U64SIZGQCBg8VAQMwMDFkAgcPDxYCHwBlZGQCAQ9kFgwCAQ8PFgIfBAULaW1nLzAwMi5wbmdkZAIDDw8WAh8ABQQwLzUwZGQCBA8VAQMwMDJkAgUPDxYCHwAFD+qwhO2OuOyLney9lOuEiGRkAgYPFQEDMDAyZAIHDw8WAh8AZWRkAhMPFgIfAwICFgRmD2QWCgIBDw8WAh8EBQtpbWcvMDAxLnBuZ2RkAgIPFQEDMDAxZAIDDw8WAh8ABQzsponshJ3svZTrhIhkZAIEDxUBAzAwMWQCBQ8PFgIfAGVkZAIBD2QWCgIBDw8WAh8EBQtpbWcvMDAyLnBuZ2RkAgIPFQEDMDAyZAIDDw8WAh8ABQ/qsITtjrjsi53svZTrhIhkZAIEDxUBAzAwMmQCBQ8PFgIfAGVkZGRqSfP/wfxfRuTNWyM0nFDx8+LKkzIYxGAMfI5FU551pQ==" />
-    </div>
-    
-    <script type="text/javascript">
-    //<![CDATA[
-    var theForm = document.forms['form1'];
-    if (!theForm) {
-        theForm = document.form1;
-    }
-    function __doPostBack(eventTarget, eventArgument) {
-        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-            theForm.__EVENTTARGET.value = eventTarget;
-            theForm.__EVENTARGUMENT.value = eventArgument;
-            theForm.submit();
-        }
-    }
-    //]]>
-    </script>
-    
-    
-    <script src="/WebResource.axd?d=xdr-IoWgZut-g7j3H2fPEr99_dJ6dlD9R2JXopYwW4KIb1E6spp3dmH3mszW_39hrJULWJmYfG_GQi5cfA2T4S5MsgjO3kt6FOg7Ve7WoqM1&amp;t=637696606958594948" type="text/javascript"></script>
-    
-    
-    <script src="/ScriptResource.axd?d=0f4djPaKktK7S7r5HbeIAJX2eFE0nprSPkh9YED4F82D-MtSq4XQpz1jy2m8H9A2h8xswihiq57NLv04f_hcvryqnWJDfhGBaf_AEA_aaGW1RA9sDGZT45ZXzQ74rUGui8mFx2TU4OYhq-oSLHfF0EPXwvDlinl8l48oVhUWvtvMlUJi_15Q2lCPjBnRa9-y0&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
-    <script type="text/javascript">
-    //<![CDATA[
-    if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
-    //]]>
-    </script>
-    
-    <script src="/ScriptResource.axd?d=-Ts7hJl5A9C4hsARmnEv8hJt2gJvo90XypTba9zH4LQ-Btyeu8Dud1GlNBflXr-WFQqoAbfYlXIpVsdBfdKfxW2nI6JbGR_NF1mm5bgWBXyTpnzT3G6Kv-0Sa0iYTOwKcNzrKGJSjbQuK6EY9VGLsb_bcyLbmbsVq6vT8Gf8Pm2om28ZM8FcK98Y5jSF4Y3Z0&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
-    <script src="/ScriptResource.axd?d=J9_66vGjPhLkukWn9bufv2GMYfuUWtitdOfJu_ZoTN2GalVrwaZt5p89v68I082WzgqeZbIpaEkYEfun6DIsj4nBrIrpXnzJ5XJ1IS5nLgG8LIoovikuBnNY5njqbBSud7-ybNaKk4Yu2vhkLcsJ6p4TuoZWc7M_4ZLbwepaXVFRNgVS4ei973LR61L55IK10&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
-    <div class="aspNetHidden">
-    
-        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="147489A5" />
-        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZg4FgZbUqYLIL1S6LCba1slliAPKY+KvRmniYVjNuQiG1G0Qm+LLQpkyMzYKWon2NiEzRKmoaXqxD1ZDMcXvMuZ0GMYuWV8RTYGatvtfJi5ubbaobOintImIY7q6VqZK/bKZsxwaqvYX5apFJnfGpybo4di3qC3H7TvMTArDg+AQ==" />
-    </div>
-            <div>
-                <div class="preloader">
+ttt
+                
+            <div>sss
+                <div>
                     <div class="loader">
-                        <div class="loader__figure"></div>
-                        <p class="loader__label">간편식</p>
+                        <div class=""></div>
+                        <p class="loader__label"></p>
                     </div>
                 </div>
                 <div id="main-wrapper">    
@@ -456,13 +298,10 @@
                                     <div class="row justify-content-center ">
                                         <div class="col-md-6 align-self-center text-center" data-aos="fade-down" data-aos-duration="1200">
                                             <h1 class="title">식사 예약 시스템</h1>
-                                            <h3><span id="ipadd" style="color:White;">Connected : 10.249.24.132</span></h3>
+                                            <h3><span id="ipadd" style="color:White;"></span></h3>
                                             <h3 class="subtitle op-8">
-                                                <script type="text/javascript">
-    //<![CDATA[
-    Sys.WebForms.PageRequestManager._initialize('scrpt', 'form1', ['tUpdatePanel1','UpdatePanel1','tUpdatePanel2','UpdatePanel2'], ['Timer1','Timer1','Timer2','Timer2'], [], 90, '');
-    //]]>
-    </script>
+                                                <-- 추후 여기에 권한 넣어야 함.-->
+                                                <a target='_blank' style='color:white'><mark>예약현황</mark></a>
     
                                                  <!-------------------------- update -1 ------------------------------------------->
                                                 <div id="UpdatePanel1">
@@ -530,9 +369,9 @@
                                                                                     </h5>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>                                                                                    
+                                                                        </div>    aa                                                                               
                                                                     </td>
-                                                                  
+                                                            
                                                                     <td>
                                                                         <div class="">
                                                                             <div class="">
