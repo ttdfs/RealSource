@@ -9,6 +9,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by product_name
 	</select>
 
+
+	<select id="request_food_into" resultType="java.util.Map">
+		select * from cfood where id= #{emp_id} 
+		
+	</select>
+
+
 	<insert id="insert">
 		insert into product (product_name, description, price, filename)
 		values 

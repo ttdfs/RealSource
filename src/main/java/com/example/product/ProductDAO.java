@@ -16,6 +16,13 @@ public class ProductDAO {
 	public List<Map<String, Object>> list(String product_name) {
 		return sqlSession.selectList("product.list", "%" + product_name + "%");
 	}
+	
+	// 간편식 신처에서 조회 하는 것들
+	
+	public List<Map<String, Object>> emp_id_check(String emp_id) {
+		return sqlSession.selectList("product.request_food_into", emp_id);
+	}
+	
 
 	public void insert(Map<String, Object> map) {
 		sqlSession.insert("product.insert", map);

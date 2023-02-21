@@ -45,12 +45,16 @@ public class ProductController {
 	
 	// 부트스프렙 붙인거의 메인 페이지 부분 
 	@RequestMapping("/index")
-	public ModelAndView mainhome(@RequestParam(defaultValue = "") String product_name, ModelAndView mav) {
+	public ModelAndView mainhome(@RequestParam(defaultValue = "") String product_name, String emp_id,ModelAndView mav) {
 		System.out.println("----------/index---");
-		System.out.println("----------/product_name---:: "+product_name);
+		System.out.println("----------/emp_id---:: "+emp_id);
 		
 		
+		
+
 		mav.setViewName("index");   //view의 어디에 출력할까
+		mav.addObject("emp_id", emp_id);
+		
 		mav.addObject("list", productDao.list(product_name));
 		mav.addObject("product_name", product_name);
 		mav.addObject("test_name", "testtt333ttttt");
@@ -130,15 +134,95 @@ public class ProductController {
 		return "Request_Study_quest";
 	}
 	
+	/*
 	@RequestMapping("/Request_Food")
-	public String Request_Food() {
+	public String Request_Food(String emp_id) {
 		System.out.println("----------/Into Request_Food<--------");
+		
+		System.out.println("----------/Into emp_id<--------::::::"+emp_id);
+		
+		
 		return "Request_Food";
 	}
 	
+	*/
 	
+	@RequestMapping("/Request_Food")
+	public ModelAndView  Request_Food(String emp_id) {
+		System.out.println("----------/new model and view into<--------");
+		
+		System.out.println("----------/new model and view --> Into emp_id<--------::::::"+emp_id);
+		
+		ModelAndView mav = new ModelAndView();
+		
+		
+	//	return "Request_Food";
+		
+		
+		mav.setViewName("Request_Food");   //view의 어디에 출력할까
+		mav.addObject("emp_id", emp_id);
+		
+		mav.addObject("list", productDao.emp_id_check(emp_id));
+    //		mav.addObject("product_name", product_name);
+		mav.addObject("test_name", "testtt333ttttt");
+		return mav;
+		
+		
+		
+	}
 	
-	////////////////////
+	////////////////////  신청 버튼을 클릭 했을 때 /////
+	@RequestMapping("/Request_Food_confrim")
+	public ModelAndView  Request_Food_confrim(String emp_id,String select_box) {
+		System.out.println("----------/Request_Food_confrim<--------");
+		
+		System.out.println("----------/Request_Food_confrim --> Into emp_id<--------::::::"+emp_id);
+		
+		System.out.println("----------/Request_Food_confrim_no 숫자 --> Into confirm_no<--------::::::"+select_box);
+		
+		
+		ModelAndView mav = new ModelAndView();
+		
+		
+	
+		
+		mav.setViewName("Request_Food");   //view의 어디에 출력할까
+		mav.addObject("emp_id", emp_id);
+		
+    // 		mav.addObject("product_name", product_name);
+		mav.addObject("test_name", "testtt333ttttt");
+		return mav;
+		
+		
+		
+	}
+	
+////////////////////취소 버튼을 클릭 했을 때 /////
+@RequestMapping("/Request_Food_cancle")
+public ModelAndView  Request_Food_cancle(String emp_id,String select_box) {
+System.out.println("----------/cancle<--------");
+
+System.out.println("----------/cancle --> Into emp_id<--------::::::"+emp_id);
+
+System.out.println("----------/cancle 숫자 --> Into confirm_no<--------::::::"+select_box);
+
+
+ModelAndView mav = new ModelAndView();
+
+
+
+
+mav.setViewName("Request_Food");   //view의 어디에 출력할까
+mav.addObject("emp_id", emp_id);
+
+// 		mav.addObject("product_name", product_name);
+mav.addObject("test_name", "testtt333ttttt");
+return mav;
+
+
+
+}
+	
 	@RequestMapping("/buttons")
 	public String Buttons() {
 		System.out.println("----------/Into Buttons<--------");

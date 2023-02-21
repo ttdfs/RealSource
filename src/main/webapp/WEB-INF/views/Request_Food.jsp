@@ -43,32 +43,107 @@
 
      <script>
 
-            var index = "";
+           // var index = "";
+
+         //  var emp_id_confirm = document.getElementById('emp_id_hidden').value;
+
+           var index = 0;
+
+           var select_box = 0; //즉석코너 1 , 간편식 2 , 아무것도 신청 안함 0
+
+           var emp_id_confirm = 0;  //사번
 
             $(document).ready(function(){
-            
-                $(".service-24").click(function () {
                 
-                    index = $(".service-24").index(this)+1;
-                                
-                });
-            });
+               // alert("sdfsdf");
+               //alert(${emp_id}.innerText);
+               
 
-            function btn_1()
+               //alert(document.getElementById('emp_id_hidden').value);
+
+
+               $("a.service-24").click(function(event) {
+                // 이벤트의 기본 동작을 막습니다. (여기서는 링크로 이동하는 동작)
+
+               // var emp_id_confirm = document.getElementById('emp_id_hidden').value;
+
+               // alert("emp_id_confirm   2 번째 간편식 코너" + emp_id_confirm);
+                
+               event.preventDefault();
+                // 클릭된 요소가 누구인지 확인합니다.
+              
+
+                var clickedElement = $(this);
+                if (clickedElement.attr("href") === "javascript:check_food2()") {
+                // 두 번째 카드 링크를 클릭한 경우 처리할 코드를 작성합니다.
+                console.log("두 번째 카드 링크를 클릭했습니다.");
+               
+                select_box = 2;
+                
+                alert("2 번째 간편식 코너");
+
+                } else {
+                // 다른 요소를 클릭한 경우 처리할 코드를 작성합니다.
+                
+                select_box = 1;
+
+                alert("1 번째 즉석 코너");
+
+                console.log("다른 요소를 클릭했습니다.");
+                }
+            });
+            });
+          
+
+            $(".service-24").click(function(){
+                
+                    console.log("111start"+index);
+
+                    index = $(".service-24").index(this)+1;
+                    
+                    console.log("222start"+index);
+                    
+                });
+            
+
+
+            function   check_food2() {
+
+                console.log("check_food2 들어옴 ::: "+index);
+
+                index = index +1;
+
+                console.log("222start ::: ::: ::: "+index);
+            }
+
+            function btn_1()   //신청 버튼 클릭했을 때
             {  
-                alert("index의 수"+index);
-                if (!index)
+               
+                var emp_id_confirm = document.getElementById('emp_id_hidden').value;
+                 
+
+                if (select_box == 1)  //왼쪽 즉석코너 신청 시
                 {
-                    alert("메뉴를 선택해주세요");
+                   // alert("http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box);
+
+                    window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+
+
+                    // alert("메뉴를 선택해주세요");
                     return false;
 
                 }
-                else {
+                else if (select_box == 2){  //오른쪽 간편식 코너 신청 시
 
-                var apply_menu = document.getElementById('apply_menu').innerText;     
+                    alert("2------ 신청을 클릭했음");
+                    var apply_menu = document.getElementById('apply_menu').innerText;     
 
-                alert("apply_menu"+apply_menu); 
+                      alert("apply_menu"+apply_menu); 
 
+
+                      window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+
+                      /*
                     if (apply_menu == "") { 
 
                         var result = confirm("간편식을 예약하시겠습니까??");
@@ -85,19 +160,79 @@
                         //    __doPostBack('btnSave','')
 
                         }
+                        */
                     }
-                    else {
+                    else {    //아무것도 신청 안함
 
-                        alert("이미 예약한 상태입니다.");
-
+                        alert("아무것도 신청 안함 두개중 하나를 신청 해야 함");
+                     
                         return false();
 
                     }
-                }
+                
 
             }
 
-            function btn_2()
+            function btn_2()   //취소 버튼 클릭했을 때
+            {  
+               
+                var emp_id_confirm = document.getElementById('emp_id_hidden').value;
+                 
+
+                if (select_box == 1)  //왼쪽 즉석코너 신청 시
+                {
+                   // alert("http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box);
+
+                    window.location.href = "http://localhost/Request_Food_cancle?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+
+
+                    // alert("메뉴를 선택해주세요");
+                    return false;
+
+                }
+                else if (select_box == 2){  //오른쪽 간편식 코너 신청 시
+
+                    alert("2------ 신청을 클릭했음");
+                    var apply_menu = document.getElementById('apply_menu').innerText;     
+
+                      alert("apply_menu"+apply_menu); 
+
+
+                      window.location.href = "http://localhost/Request_Food_cancle?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+
+                      /*
+                    if (apply_menu == "") { 
+
+                        var result = confirm("간편식을 예약하시겠습니까??");
+
+                        if (result == true) {
+
+                            var myHidden = document.getElementById('HiddenField1');
+
+                            alert("myHidden ===> "+myHidden); 
+
+                            myHidden.value = index;
+                         
+                            // dopostBack은 save하는 것
+                        //    __doPostBack('btnSave','')
+
+                        }
+                        */
+                    }
+                    else {    //아무것도 신청 안함
+
+                        alert("아무것도 신청 안함 두개 중 하나를 신청 해야 함");
+                     
+                        return false();
+
+                    }
+                
+
+            }
+
+            /*
+
+            function btn_2()  //취소 버튼 클릭시
             {
                 var apply_menu = document.getElementById('apply_menu').innerText; 
 
@@ -123,12 +258,63 @@
 
                 }
             }
+
+            */
+
+            function showClock(){
+              //  alert("result");
+                 var connectedDate = new Date();
+
+                 var divClock = document.getElementById("divClock333");
+
+              //   alert("time");
+                 let today = new Date();   
+
+                 let year = today.getFullYear(); // 년도
+                 let month = today.getMonth() + 1;  // 월
+                 let date = today.getDate();  // 날짜
+                 let day = today.getDay();  // 요일
+                
+                 let hours = today.getHours(); // 시
+                 let minutes = today.getMinutes();  // 분
+                 let seconds = today.getSeconds();  // 초
+
+
+                // var result = Math.ceil((currentDate - connectedDate)/1000);
+
+               var time = year + '/' + month + '/' + date + '    현재시간     ' + hours + ':' + minutes + ':' + seconds ;
+                
+
+             //   alert(time);
+                divClock.innerText = time ;
+                 //setTimeout(showClock,1000);
+
+
+              
+              /* 
+                const currentTime = new Date();
+                const startHour = 9; // 오전 9시
+                const endHour = 10:30; // 오전 10시 30분
+                const currentHour = currentTime.getHours();
+
+                if (currentHour >= startHour && currentHour < endHour) {
+               
+                    var timecontents = document.getElementById("Label2");
+                    hiddenElement.style.display = 'none';
+                    console.log("안녕하세요");
+                    }
+
+
+*/
+            }
+
+
      </script>
 
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="showClock()">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -269,6 +455,7 @@
          
         </ul>
         <!-- End of Sidebar -->
+     
 vv333vv  
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -301,14 +488,19 @@ ttt
                                             <h3><span id="ipadd" style="color:White;"></span></h3>
                                             <h3 class="subtitle op-8">
                                                 <-- 추후 여기에 권한 넣어야 함.-->
-                                                <a target='_blank' style='color:white'><mark>예약현황</mark></a>
+
+                                                 <div id = "divClock333" class="title"></div>
+                                                
+                                                 <a target='_blank' style='color:white'><mark>예약현황</mark></a>
     
                                                  <!-------------------------- update -1 ------------------------------------------->
                                                 <div id="UpdatePanel1">
         
                                                          &nbsp;<p><span id="Label1"></span></p>
-                                                        &nbsp;<span id="Label2" style="font-size:XX-Large;"></span>
-                                                    
+                                                        &nbsp;<span id="Label2" style="font-size:XX-Large;"> 
+                                                             지금은 신청 가능한 시간이 아닙니다.</span>
+                                                             <input type=hidden id="emp_id_hidden" name="abcName" value=${emp_id}>
+                                                             
     </div>
                                                 <span id="Timer1" style="visibility:hidden;display:none;"></span> 
                                                  <!-------------------------- update -1 ------------------------------------------->
@@ -416,7 +608,7 @@ ttt
                                                         <a href="javascript:void(0)" class="service-24"> 
                                                             <img id="Repeater2_menu_img_0" src="img/001.png" style="width:250px;" />
                                                             <h6 class="ser-title text_001">
-                                                                <span id="Repeater2_menu_nm_0">즉석코너</span>
+                                                                <span id="Repeater2_menu_nm_0">즉석코너999</span>
                                                             </h6>
                                                             <h6 class="ser-title text_001">
                                                                 <span id="Repeater2_Label5_0"></span>
@@ -427,7 +619,7 @@ ttt
                                             
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="card card-shadow">
-                                                        <a href="javascript:void(0)" class="service-24"> 
+                                                        <a href="javascript:check_food2()" class="service-24"> 
                                                             <img id="Repeater2_menu_img_1" src="img/002.png" style="width:250px;" />
                                                             <h6 class="ser-title text_002">
                                                                 <span id="Repeater2_menu_nm_1">간편식코너</span>
@@ -551,11 +743,11 @@ ttt
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+  <!--  <script src="js/demo/chart-area-demo.js"></script> -->
+  <!--  <script src="js/demo/chart-pie-demo.js"></script> -->
 
 </body>
 
