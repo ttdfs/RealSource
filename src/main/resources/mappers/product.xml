@@ -11,11 +11,90 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 
 	<select id="request_food_into" resultType="java.util.Map">
-		select * from cfood where id= #{emp_id} 
+		select * from cfood where id= #{emp_id} and convert(varchar(8), insert_DT, 112) = convert(varchar(8), getdate(), 112)
 		
 	</select>
 
-
+    <!-- 음식신청 처음 들어와서 하는 궠리들 -->
+      <!-- 1. 오늘의 전체 음식 가능 한 잔량 수량 -->
+    <select id="Food_Today_remain_qty" resultType="java.util.Map">
+		SELECT TB1.MENU_NM MENU_NM,tb1.MENU_CD MENU_CD,Tb1.times times, ISNULL((TB1.MENU_CNT-TB2.CNT),TB1.MENU_CNT) REMAIN_CNTS, TB1.MENU_CNT ORGIN_TOTAL_CNT 
+         FROM CFOOD_MENU TB1 
+           WITH (NOLOCK) LEFT JOIN (
+	            SELECT MENU_CD,COUNT(*) CNT FROM CFOOD
+                 WHERE CONVERT(NVARCHAR, INSERT_DT,23)= CONVERT(NVARCHAR, GETDATE(), 23) 
+				     GROUP BY MENU_CD    ) TB2
+	                    ON TB1.MENU_CD=TB2.MENU_CD
+		
+	</select>
+	
+	 
+	  <!-- 2. 로그인한 사람 id로 신청한 수량의 갯수 -->
+	<select id="Food_Today_quest_qty" resultType="java.util.Map">
+		select isnull(count(*),0) foodcount from CFOOD aa where aa.ID =  #{emp_id} AND CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) group by aa.id
+	</select>
+	
+	  <!-- 3. 신청한 사람의 음식 중류는? -->
+	<select id="Food_Today_choiced" resultType="java.util.Map">
+		select menu_cd from CFOOD aa where aa.ID =  #{emp_id} AND CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) group by aa.id
+	</select>
+	
+	
+	  <!-- 4. 오늘 전체로 신청된 응식들의 잔량 -->
+	<select id="Food_Today_remained_qty" resultType="java.util.Map">
+		select menu_nm, count(menu_cd) menu_cd from 
+          CFOOD aa where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+          group by menu_nm
+	</select>
+	
+	  <!-- 5. 오늘 왼쪽 001로 전체로 신청된 응식들의 잔량 -->
+	<select id="Food_Today_001_remained_qty" resultType="java.util.Map">
+		select menu_nm,'001_menu' today_count001, count(menu_cd) menu_cd from 
+			CFOOD aa where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+			and  menu_cd = '001'
+			group by menu_nm 
+	</select>
+	
+	  <!-- 6. 오늘 오른쪽 002로 전체로 신청된 응식들의 잔량 -->
+	<select id="Food_Today_002_remained_qty" resultType="java.util.Map">
+		select menu_nm,'002_menu' today_count002, count(menu_cd) menu_cd from 
+			CFOOD aa where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+			and  menu_cd = '002'
+			group by menu_nm 
+	</select>
+	
+	
+	  <!-- 7. 오늘 나의 001 신청 수량 -->
+	<select id="My_Today_001" resultType="java.util.Map">
+		select count(*)  count from 
+			CFOOD aa where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+			and  menu_cd = '001' and ID =  #{emp_id}
+			group by menu_nm 
+	</select>
+	
+	
+	  <!-- 8. 오늘 나의 002 신청 수량  -->
+	<select id="My_Today_002" resultType="java.util.Map">
+		select count(*) count from 
+			CFOOD aa where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+			and  menu_cd = '002' and ID =  #{emp_id}
+			
+	</select>
+		
+    <insert id="food_reqeust_insert">
+		insert into CFOOD (NO,ID,NAME,EMPCODE,GRADE,DEPTNM,FLAG,INSERT_DT,UPDATE_DT,MENU,MENU_CD,MENU_nm)
+		values (21156,#{emp_id},'김경수',2050306,'부장','SKH  PE팀','Y',GETDATE(),GETDATE(),'KM',#{select_box},'돈까스')
+	</insert>
+	
+	 <delete id="food_reqeust_cancel">
+		delete from CFOOD 
+		 where  CONVERT(NVARCHAR,INSERT_DT,23)=CONVERT(NVARCHAR,GETDATE(),23) 
+			and ID =  #{emp_id}
+	 </delete>
+  <!-- 엔드 오브 푸드  -->
+  
+  
+  
 	<insert id="insert">
 		insert into product (product_name, description, price, filename)
 		values 

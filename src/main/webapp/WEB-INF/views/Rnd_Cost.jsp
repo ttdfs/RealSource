@@ -90,6 +90,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">관리메뉴:</h6>
+                        <a class="collapse-item" href="Mng_Study_org_register.jsp">학습조직등록</a>  
                         <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
                         <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
                         <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>

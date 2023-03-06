@@ -121,12 +121,17 @@
                
                 var emp_id_confirm = document.getElementById('emp_id_hidden').value;
                  
+                if(confirm("정말로 이 작업을 수행하시겠습니까?")) {
+                    // 확인 버튼을 클릭한 경우 실행될 코드
+                
+
+
 
                 if (select_box == 1)  //왼쪽 즉석코너 신청 시
                 {
                    // alert("http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box);
 
-                    window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+                    window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" +"00"+ select_box;
 
 
                     // alert("메뉴를 선택해주세요");
@@ -141,7 +146,7 @@
                       alert("apply_menu"+apply_menu); 
 
 
-                      window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" + select_box;
+                      window.location.href = "http://localhost/Request_Food_confrim?emp_id=" + emp_id_confirm + "&select_box=" +"00"+ select_box;
 
                       /*
                     if (apply_menu == "") { 
@@ -170,7 +175,9 @@
 
                     }
                 
-
+                } else {
+                    return ; // 취소 버튼을 클릭한 경우 실행될 코드
+                    }
             }
 
             function btn_2()   //취소 버튼 클릭했을 때
@@ -263,10 +270,33 @@
 
             function showClock(){
               //  alert("result");
+             // alert(document.getElementById("Food_001coutnt").value);
+             // alert(document.getElementById("Food_002coutnt").value);
+               
+              var var_Food_001coutnt = document.getElementById("Food_001coutnt").value;
+              var var_Food_002coutnt = document.getElementById("Food_002coutnt").value;
+
+               if(var_Food_001coutnt+var_Food_002coutnt >= 1){
+                 alert("이미 신청하셨으므로 취소만 가능합니다.");
+              //   const target = document.getElementById("confrim")
+              //   target.disabled = false;
+               
+              var btn = document.getElementById("confrim");
+                btn.parentNode.removeChild(btn);
+                return false;
+            
+            
+            }
+
                  var connectedDate = new Date();
 
-                 var divClock = document.getElementById("divClock333");
-
+                 var Today_total_food_count = document.getElementById("Today_total_food_count");
+                 var Today_total_001_food_count = document.getElementById("Today_total_001_food_count");
+                 var Today_total_002_food_count = document.getElementById("Today_total_002_food_count");
+                 var Food_001coutnt = document.getElementById("Food_001coutnt");
+                 var Food_002coutnt = document.getElementById("Food_002coutnt");
+                
+                
               //   alert("time");
                  let today = new Date();   
 
@@ -285,11 +315,11 @@
                var time = year + '/' + month + '/' + date + '    현재시간     ' + hours + ':' + minutes + ':' + seconds ;
                 
 
-             //   alert(time);
+          //    alert(time);
                 divClock.innerText = time ;
                  //setTimeout(showClock,1000);
 
-
+               //  document.setElementById("result").value = "afasdfasdfad"
               
               /* 
                 const currentTime = new Date();
@@ -375,6 +405,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">관리메뉴:</h6>
+                        <a class="collapse-item" href="Mng_Study_org_register">학습조직등록</a>  
                         <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
                         <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
                         <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>
@@ -456,15 +487,70 @@
         </ul>
         <!-- End of Sidebar -->
      
-vv333vv  
+
+
+ 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-yyy
+
             <!-- Main Content -->
             <div id="content">
-ttt
-                
-            <div>sss
+<br> (로그인한 나의 아이디)) : --- ${emp_id}
+<br> (취소 여부)) : --- ${cancel_checking}
+<input type=hidden id="cancel_checking" name="abcName1" value=${cancel_checking}>
+
+<br> (신청 여부)) : --- ${confirm_checking}
+<input type=hidden id="confirm_checking" name="abcName1" value=${confirm_checking}>
+
+<br> (취소/신청한 박스 종류)) : --- ${select_box}
+<input type=hidden id="select_box" name="abcName1" value=${select_box}>
+
+<br>
+(오늘의) 전체 갯수)) : --- ${Today_total_food_count}
+<input type=hidden id="Today_total_food_count" name="abcName1" value=${Today_total_food_count}>
+
+<br>(오늘의) 즉석 코너 001)) : --- ${Today_total_001_food_count}
+<input type=hidden id="Today_total_001_food_count" name="abcName1" value=${Today_total_001_food_count}>
+
+<br>
+(오늘의) 간편 코너 002)) : --- ${Today_total_002_food_count}
+<input type=hidden id="Today_total_002_food_count" name="abcName1" value=${Today_total_002_food_count}>
+
+<br>
+[나의] 즉석 코너 001)) : --- ${Food_001coutnt}
+<input type=hidden id="Food_001coutnt" name="abcName1" value=${Food_001coutnt}>
+<br>
+[나의] 간편식 코너 002)) : ----${Food_002coutnt}
+<br>
+<input type=hidden id="Food_002coutnt" name="abcName5" value=${Food_002coutnt}>
+
+
+
+
+
+<table border="5">
+    <tr>
+        <th>menu_nm</th>
+        <th>menu_cd</th>
+        <th>times</th>
+        <th>remain_cnts</th>
+        <th>orgin_total_cnt</th>
+    </tr> 
+
+
+
+    <c:forEach var="mm" items="${Food_Today_remain_qty}">
+        <tr align="Right"> 
+            <td>${mm.MENU_NM}</td>
+            <td>${mm.MENU_CD}</td>
+            <td>${mm.times}</td>
+            <td>${mm.REMAIN_CNTS}</td>
+            <td>${mm.ORGIN_TOTAL_CNT}</td>
+        </tr>
+    </c:forEach>
+</table>
+
+            <div> 
                 <div>
                     <div class="loader">
                         <div class=""></div>
@@ -480,7 +566,7 @@ ttt
                     </div>
                     <div class="page-wrapper">
                         <div class="container-fluid">
-                            <div class="banner-innerpage" style="background-image:url(assets/images/innerpage/banner-bg4.jpg)">
+                            <div class="banner-innerpage" style="background-image:url(assets/images/innerpage/banner-bg8.jpg)">
                                 <div class="container">
                                     <div class="row justify-content-center ">
                                         <div class="col-md-6 align-self-center text-center" data-aos="fade-down" data-aos-duration="1200">
@@ -546,11 +632,11 @@ ttt
                                                                         <div class="">
                                                                             <div class="">
                                                                                 <div class="display-5">
-                                                                                    <img id="Repeater1_menu_img_0" src="img/001.png" style="width:250px;" />
+                                                                                    <img id="Repeater1_menu_img_0" src="img/snack.jpg" style="width:250px;" />
                                                                                 </div>
                                                                                 <div class="">
                                                                                     <h2 class="font-light counter m-b-0">
-                                                                                        <span id="Repeater1_label3_0">45/50</span>
+                                                                                        <span id="Repeater1_label3_0">${Today_total_001_food_count}/50</span>
                                                                                     </h2>
                                                                                     
                                                                                     <h5 class="font-15 text-uppercase text_001">
@@ -561,18 +647,18 @@ ttt
                                                                                     </h5>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>    aa                                                                               
+                                                                        </div>                                                                                
                                                                     </td>
                                                             
                                                                     <td>
                                                                         <div class="">
                                                                             <div class="">
                                                                                 <div class="display-5">
-                                                                                    <img id="Repeater1_menu_img_1" src="img/002.png" style="width:250px;" />
+                                                                                    <img id="Repeater1_menu_img_1" src="img/fastfood.jpg" style="width:250px;" />
                                                                                 </div>
                                                                                 <div class="">
                                                                                     <h2 class="font-light counter m-b-0">
-                                                                                        <span id="Repeater1_label3_1">0/50</span>
+                                                                                        <span id="Repeater1_label3_1">${Today_total_002_food_count}/50</span>
                                                                                     </h2>
                                                                                     
                                                                                     <h5 class="font-15 text-uppercase text_002">
@@ -608,7 +694,7 @@ ttt
                                                         <a href="javascript:void(0)" class="service-24"> 
                                                             <img id="Repeater2_menu_img_0" src="img/001.png" style="width:250px;" />
                                                             <h6 class="ser-title text_001">
-                                                                <span id="Repeater2_menu_nm_0">즉석코너999</span>
+                                                                <span id="Repeater2_menu_nm_0">즉석코너</span>
                                                             </h6>
                                                             <h6 class="ser-title text_001">
                                                                 <span id="Repeater2_Label5_0"></span>
@@ -632,10 +718,10 @@ ttt
                                                 </div>
                                             
                                         <div class="col-md-12 m-t-20 text-center">   
-                                            <a class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#" onclick="return btn_1();">
+                                            <a id="confrim" class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#" onclick="return btn_1();">
                                                 <span>신 청 <i class="ti-arrow-right"></i></span>
                                             </a>&nbsp;&nbsp;
-                                            <a class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#f24" onclick="return btn_2()">
+                                            <a class="btn btn-outline-success btn-md btn-arrow" data-toggle="collapse" href="#" onclick="return btn_2()">
                                                 <span>취 소 <i class="ti-arrow-right"></i></span>
                                             </a> 
                                             <span id="test"></span>
