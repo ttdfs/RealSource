@@ -411,6 +411,13 @@ public class ProductController {
 		return "Mng_Study_org";
 	}
 	
+	@RequestMapping("/Mng_Study_org_register")
+	public String Mng_Study_org_register() {
+		System.out.println("----------/Into Mng_Study_org_register<--------");
+		return "Mng_Study_org_register";
+	}
+	
+	
 	@RequestMapping("/Mng_Study_Meterial")
 	public String Mng_Study_Meterial() {
 		System.out.println("----------/Into Mng_Study_Meterial<--------");

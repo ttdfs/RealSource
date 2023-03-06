@@ -88,8 +88,8 @@
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">관리메뉴:</h6>
-                        <a class="collapse-item" href="Mng_Study_org_register.jsp">학습조직등록</a>  
-                        <a class="collapse-item active" href="Mng_Study_org">학습조직관리</a>                        
+                        <a class="collapse-item active" href="Mng_Study_org_register">학습조직등록</a>  
+                        <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
                         <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
                         <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>
                     </div>
@@ -176,209 +176,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
+        
 
 
 
@@ -393,117 +191,177 @@
 
 
 
-
-
-
-
-
-
-  
-  <div align="left">
-    <form name="form"   method="post" action="">
-    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="865">
-                <tr>
-            <td class="tb_bottom" width="22" height="37">
-                <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
-            </td>
-            <td width="133" height="37" class="tb_bottom"><b><font size="2" color="#3B608D">학습조직현황</font></b>        	      </td>
-                    <td width="100" height="37" class="tb_bottom">
-                                    <a href="./s_org_form.asp">학습조직등록</a>                
-                    </td>
-                    <td width="91" height="37" class="tb_bottom">
-                                    &nbsp;</td>
-                    <td width="519" height="37" class="tb_bottom">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td width="865" height="32" class="tb_bottom" colspan="5">
-                        <table cellpadding="0" cellspacing="0" height="26" width="847">
-                            <tr>
-                                <td  width="32" height="26">&nbsp;</td>
-                                <td  width="73" height="26">
-                                    <p align="center">사업부</p>
-                                </td>
-                                <td  width="86" height="26">&nbsp;</td>
-                                <td  width="76" height="26">
-                                    <p align="center">분류</p>
-                                </td>
-                                <td  width="66" height="26">&nbsp;</td>
-                                <td  width="65" height="26">
-                                    <p align="center">리더</p>
-                                </td>
-                                <td  width="78" height="26">&nbsp;</td>
-                                <td  width="82" height="26">
-                                    <p align="center">학습조직명</p>
-                                </td>
-                                <td  width="194" height="26">&nbsp;</td>
-                                <td  width="58" height="26">&nbsp;</td>
-                                <td  width="20" height="26">&nbsp;</td>
-                                <td  width="17" height="26">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-    </table>
-    <table border="0" width="866" height="84" cellspacing="0">
-                <tr>
-                    <td class="bdTop_section" width="30"   height="26">
-                        <p align="center"><b><font color="#3B608D">NO</font></b></p>
-                    </td>
-                    <td width="317" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">학습조직명</font></b></p>
-                    </td>
-                    <td class="bdTop_section"  width="59" height="26">
-                        <p align="center"><b><font color="#3B608D">사업부</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="104" height="26">
-                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="53" height="26">
-                        <p align="center"><b><font color="#3B608D">분류</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="59" height="26">
-                        <p align="center"><b><font color="#3B608D">리더</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="89" height="26">
-                        <p align="center"><b><font color="#3B608D">개설일</font></b></p>
-                    </td>
-                    <td width="52" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">자료수</font></b></p>
-                    </td>
-                    <td width="85" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">구성원</font></b></p>
-                    </td>
-                </tr>
+ <!-- ----------------------------------------------------------------------->
+<form name="form" action="" method="post">
+<input type="hidden" name="deptid" value="">
+<table cellpadding="0" cellspacing="0" height="392" width="765">
+    <tbody><tr>
+                <td width="22" height="32">
+                    <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
+                </td>
+                <td width="743" height="32"><b><font size="2" color="#3B608D">학습조직 등록</font></b></td>
+    </tr>
         <tr>
-                            <td class="bdTop_line" width="30" height="1"></td>
-                    <td width="317" height="1" class="bdTop_line"></td>
-                    <td width="59" height="1" class="bdTop_line"></td>
-                    <td width="104" height="1" class="bdTop_line"></td>
-                    <td width="53" height="1" class="bdTop_line"></td>
-                    <td width="59" height="1" class="bdTop_line"></td>
-                    <td width="89" height="1" class="bdTop_line"></td>
-                    <td width="52" height="1" class="bdTop_line"></td>
-                    <td width="85" height="1" class="bdTop_line"></td>
+            <td width="765" height="328" align="left" valign="top" colspan="2">
+                <table cellspacing="0" bordercolordark="white" bordercolorlight="#D4D2D2" width="751" height="319" bordercolor="white" cellpadding="0">
+                    <tbody><tr>
+                        <td width="94" height="39" class="tb_top" bgcolor="#F1F1F1">
+                            <p align="center">학습조직명</p>
+                        </td>
+                        <td width="657" height="39" bgcolor="white" class="tb_top" colspan="7">
+                            <p align="left">&nbsp;<input type="text" name="str_o_nm" size="101"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="94" height="37" class="tb_mid" bgcolor="#F1F1F1">
+                            <p align="center">사업부</p>
+                        </td>
+                        <td width="161" height="37" bgcolor="white" class="tb_mid" colspan="2">
+                            <p>&nbsp;<select name="saubu" size="1">
+                                					<option value="">선택</option>
+                                	        				
+																			   		<option value="S0110">경영전략부문</option>
+																			     				
+																			   		<option value="S0115">구매부문</option>
+																			     				
+																			   		<option value="S0120">재무부문</option>
+																			     				
+																			   		<option value="S0125">인사부문</option>
+																			     				
+																			   		<option value="S0130">해외영업팀</option>
+																			     				
+																			   		<option value="S0135">환경안전팀</option>
+																			     				
+																			   		<option value="S0140">품질보증팀</option>
+																			     				
+																			   		<option value="S0145">반도체사업총괄</option>
+																			     				
+																			   		<option value="S0150">Diffusion 사업총괄</option>
+																			     				
+																			   		<option value="S0155">반도체연구소</option>
+																			     				
+																			   		<option value="S0160">Display사업총괄</option>
+																			     				
+																			   		<option value="S0165">SEC영업1본부</option>
+																			     				
+																			   		<option value="S0170">SEC영업2본부</option>
+																			  
+																		</select></p>
+                        </td>
+                        <td width="100" height="37" bgcolor="#F1F1F1" class="tb_mid">
+                            <p align="center">부서</p>
+                        </td>
+                        <td width="132" height="37" bgcolor="white" class="tb_mid">
+                        	     &nbsp;<input type="text" name="deptname" size="16" value=""></td>
+                        <td width="36" height="37" bgcolor="white" class="tb_mid">
+                            <p align="center">
+                            	    <a href="javascript:na_open_window('buseo', '../org/org_b_tree.asp', 0, 0, 350, 370, 0, 0, 1, 1, 1)">
+                            	    	 <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
+                            	    </a>
+                            </p>
+                        </td>
+                        <td width="101" height="37" bgcolor="#F1F1F1" class="tb_mid">
+                            <p align="center">분류</p>
+                        </td>
+                        <td width="127" height="37" bgcolor="white" class="tb_mid">
+                            <p>&nbsp;<select name="b_kind" size="1">
+                                					<option value="">선택</option>
+                                	        				
+																			   		<option value="B0020">개발</option>
+																			     				
+																			   		<option value="B0030">구매</option>
+																			     				
+																			   		<option value="B0042">품질</option>
+																			     				
+																			   		<option value="B0044">C/S</option>
+																			     				
+																			   		<option value="B0055">사업기획</option>
+																			     				
+																			   		<option value="B0065">R&amp;D</option>
+																			     				
+																			   		<option value="B0070">영업</option>
+																			     				
+																			   		<option value="B0080">인사</option>
+																			     				
+																			   		<option value="B0090">재무</option>
+																			     				
+																			   		<option value="B0101">제조</option>
+																			     				
+																			   		<option value="B0105">준법</option>
+																			     				
+																			   		<option value="B0120">환경</option>
+																			     				
+																			   		<option value="B0130">정보</option>
+																			     				
+																			   		<option value="B0999">공개학습</option>
+																			  
+																		</select></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="94" height="19" class="tb_mid" bgcolor="#F1F1F1">
+                            <p align="center">학습조직리더</p>
+                        </td>
+                        <td width="126" height="38" bgcolor="white" class="tb_mid">
+                        	<input type="hidden" name="leader_code">
+                        	<input type="hidden" name="leader_id">
+															&nbsp;<input type="text" name="leader_nm" size="15"></td>
+                        <td width="35" height="38" bgcolor="white" class="tb_mid">
+                            <p align="center">
+                            	   <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
+                            	   	   <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
+                            	   </a>
+                            </p>
+                        </td>
+                        <td width="100" height="38" bgcolor="white" class="tb_mid">&nbsp;<input type="text" name="leader_posnm" size="10" readonly=""></td>
+                        <td width="168" height="38" bgcolor="white" class="tb_mid" colspan="2">&nbsp;</td>
+                        <td width="101" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
+                        <td width="127" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="94" height="89" bgcolor="#F1F1F1" class="tb_mid">
+                            <p align="center">구성원</p>
+                        </td>
+                        <td width="530" height="89" bgcolor="white" class="tb_mid" colspan="6">
+                        	    &nbsp;<textarea name="st_member" rows="5" cols="72"></textarea>
+                        </td>
+                        <td width="127" height="89" bgcolor="white" class="tb_mid">&nbsp;
+                        	   <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search2.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
+                            	  <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
+                            	</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="94" height="97" bgcolor="#F1F1F1" class="tb_mid">
+                            <p align="center">설명</p>
+                        </td>
+                        <td width="657" height="97" bgcolor="white" class="tb_mid" colspan="7">
+                        	   &nbsp;<textarea name="str_o_remark" rows="5" cols="102"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="94" height="19" bgcolor="white" class="tb_bottom">
+                            <p align="center">&nbsp;
+                            </p>
+                        </td>
+                        <td width="161" height="19" bgcolor="white" class="tb_bottom" colspan="2">
+                            <p align="center">&nbsp;</p>
+                        </td>
+                        <td width="100" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                        <td width="168" height="19" bgcolor="white" class="tb_bottom" colspan="2">&nbsp;</td>
+                        <td width="101" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                        <td width="127" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                    </tr>
+                </tbody></table>
+            </td>
         </tr>
         <tr>
-                            <td class="bdTop_shadow" width="30" height="2"></td>
-                    <td width="317" height="2" class="bdTop_shadow"></td>
-                    <td width="59" height="2" class="bdTop_shadow"></td>
-                    <td width="104" height="2" class="bdTop_shadow"></td>
-                    <td width="53" height="2" class="bdTop_shadow"></td>
-                    <td width="59" height="2" class="bdTop_shadow"></td>
-                    <td width="89" height="2" class="bdTop_shadow"></td>
-                    <td width="52" height="2" class="bdTop_shadow"></td>
-                    <td width="85" height="2" class="bdTop_shadow"></td>
-        </tr> 
-                 
-    </table>
-    </form>
-    </div>
-
-
- <!-- -----------------------------------------------------------------------
-
+            <td width="765" height="32" align="left" valign="middle" colspan="2">
+                <p align="center"><input type="button" name="formbutton3" value=" 저    장  " onclick="sendit();">  <input type="reset" name="formbutton3" value=" 취    소  "> </p>
+            </td>
+        </tr>
+</tbody></table>
+</form>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
