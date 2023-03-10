@@ -177,207 +177,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
+               
                 <!-- End of Topbar -->
 
 
@@ -479,321 +279,64 @@
                     <td width="61" height="2" class="bdTop_shadow"></td>
         </tr> 
          
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">26</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-10-24</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=19418&str_d_level=D&page=1">
-                                    공개학습조직 결과보고 10월 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">반도체1사업본부/SEC영업팀/영업3P</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">부품지원 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">장석진</p>
-            </td>
-        </tr>
         
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">25</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-10-04</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=19407&str_d_level=A&page=1">
-                                    [9월 8회차] 빛을 활용한 두께 측정, 기초에서 심화까지 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">반도체연구소 신제품개발실 개발2팀 PF P</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">공정개발 G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김동학</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">24</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-28</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18387&str_d_level=D&page=1">
-                                    반도체 장비 Concept 설계시 고려사항 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김일경</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">23</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-27</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18381&str_d_level=A&page=1">
-                                    [공개학습조직]빛을 활용한 두께 측정 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김동학</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">22</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-27</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18383&str_d_level=D&page=1">
-                                    반도체 장비 Concept 설계시 고려사항 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김일경</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">21</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-27</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18384&str_d_level=D&page=1">
-                                    반도체 장비 Concept 설계시 고려사항 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김일경</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">20</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-26</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18367&str_d_level=C&page=1">
-                                    [공개학습조직] 예측진단을 통한 사전오류 대처능력 향상 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김수빈</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">19</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-26</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18375&str_d_level=C&page=1">
-                                    [공개학습조직] 예측진단을 통한 사전오류 대처능력 향상 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김다운</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">18</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-24</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18361&str_d_level=A&page=1">
-                                    [공개학습조직] 빛을 활용한 두께 측정 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">구매의 길</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">구매 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">김동학</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">17</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2019-09-20</p>
-            </td>
-            <td width="69" height="26" class="tb_mid4">
-                <p align="center">공개학습</p>
-            </td>
-            <td width="344" height="26" class="tb_mid4">
-                       &nbsp;<a href="./s_dat_role_ch.asp?str_d_key=18352&str_d_level=D&page=1">
-                                    공개학습조직 결과보고 9월 
-                                </a>
-                       &nbsp;
-                                               <img src="../img/Toolbar-save.gif"  border="0">
-                                       
-            </td>
-            <td class="tb_mid4" width="147" height="26">
-                <p align="center">반도체1사업본부/SEC영업팀/영업3P</p>
-            </td>
-            <td class="tb_mid4" width="84" height="26">
-                <p align="center">부품지원 1G</p>
-            </td>
-            <td class="tb_mid4" width="61" height="26">
-                <p align="center">장석진</p>
-            </td>
-        </tr> 
-        
+    <%@ page import="java.sql.*" %>
+    <%
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+    
+        try {
+            // JDBC 드라이버 클래스 로드
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+    
+            // 데이터베이스 연결 정보 설정
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=EHRD_TEMP;encrypt=true;trustServerCertificate=true";
+            String user = "sa";
+            String password = "1qazxsw2";
+    
+            // 데이터베이스 연결 생성
+            conn = DriverManager.getConnection(url, user, password);
+    
+            // SQL 쿼리 실행
+            String sql = " select  str_o_nm,str_o_saubu,str_o_kind,str_o_b_code,str_o_lder_code,str_o_lder_nm,insrt_dt,str_o_key,str_o_key from STR_ORG_MAST";
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+    
+            // 결과 출력
+     
+            
+                
+              int i = 0;
+            while (rs.next()) {
+                       i =i + 1;
+  
+                      out.println("<tr>");
+                          out.println("<td align='center'>" + i + "</td>");                                          
+                         
+                          out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getString("str_o_nm") + "</td>");
+                          out.println("<td align='center' width='317' height='1' class='bdTop_shadow'>" + rs.getString("str_o_saubu") + "</td>");
+                          out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_kind") + "</td>");
+                          out.println("<td align='center' width='104' height='1' class='bdTop_shadow'>" + rs.getString("str_o_b_code") + "</td>");
+                          out.println("<td align='center' width='53' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_code") + "</td>");
+                          out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_nm") + "</td>");
+                        //  out.println("<td align='center' width='89' height='1' class='bdTop_shadow'>" + rs.getString("insrt_dt") + "</td>");
+                      //    out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getInt("str_o_key") + "</td>");
+                          out.println("</tr>");
+           
+              //     out.println(rs.getString("minor_cd") + "/////////////////////// " + rs.getString("minor_nm"));
+            }
+  
        
-          
-        <tr>
-             <td width="864" height="28" class="tb_bottom" colspan="7">
-                 <p align="center">&nbsp;
-               
-             
-                        [<font color="blue">1</font>]
-                     
-                        [<a href="s_dat_all_list.asp?page=2">2</a>]
-                     
-                        [<a href="s_dat_all_list.asp?page=3">3</a>]
-                                      
-                 </p>
-             </td>
-         </tr>
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // 리소스 반환
+            try { rs.close(); } catch (Exception e) { }
+            try { stmt.close(); } catch (Exception e) { }
+            try { conn.close(); } catch (Exception e) { }
+        }
+    %>
     </table>
     </form>
     </div>

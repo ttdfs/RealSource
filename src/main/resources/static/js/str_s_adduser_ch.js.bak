@@ -1,0 +1,22 @@
+function sendit()
+{
+	var f = document.form;
+		
+	  if(f.add_user.value.length == ''){
+			alert("공유자를 선택하세요.");
+			return false;
+		}
+		
+		    
+   quet = confirm ("저장하시겠습니까?.")
+    if (quet==true){
+    document.form.action="s_dat_mem_add_in.asp" 	
+    document.form.submit();
+
+    }
+    
+    if (quet==false){
+       return false;
+       }   
+	
+}

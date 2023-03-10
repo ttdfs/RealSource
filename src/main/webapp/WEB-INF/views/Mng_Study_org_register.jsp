@@ -3,6 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +29,13 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- 와이 와이 추가 -->
+    <script type="text/javascript" src="../js/str_org_w_ch.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <!-- 와이 와이 추가 -->
+
 </head>
 
 <body id="page-top">
@@ -179,189 +190,192 @@
         
 
 
-
-
-
-
-
-
   <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
+  <%@ page import="java.sql.*,javax.naming.*,javax.servlet.*"%>
+  <%@ page import="java.util.Enumeration" %>
+  <%@ page contentType="text/html; charset=UTF-8" %>                         
+       
+<script type="text/javascript">
+  
 
+</script>
+ 
+ <!-- ----------------------------------------------------------------------->
 
-
+ <form name="form" action="Mng_Study_org_register_result" method="post">
+    <input type="hidden" name="deptid" value="">
+    <table cellpadding="0" cellspacing="0" height="392" width="765">
+        <tbody><tr>
+                    <td width="22" height="32">
+                        <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
+                    </td>
+                    <td width="743" height="32"><b><font size="2" color="#3B608D">학습조직 등록</font></b></td>
+        </tr>
+            <tr>
+                <td width="765" height="328" align="left" valign="top" colspan="2">
+                    <table cellspacing="0" bordercolordark="white" bordercolorlight="#D4D2D2" width="751" height="319" bordercolor="white" cellpadding="0">
+                        <tbody><tr>
+                            <td width="94" height="39" class="tb_top" bgcolor="#F1F1F1">
+                                <p align="center">학습조직명</p>
+                            </td>
+                            <td width="657" height="39" bgcolor="white" class="tb_top" colspan="7">
+                                <p align="left">&nbsp;<input type="text" name="str_o_nm" size="101"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="94" height="37" class="tb_mid" bgcolor="#F1F1F1">
+                                <p align="center">사업부</p>
+                            </td>
+                            <td width="161" height="37" bgcolor="white" class="tb_mid" colspan="2">
+                                <p>&nbsp;<select name="saubu" size="1">
+                                                        <option value="">선택</option>
+                                                                
+                                                                                           <option value="S0110">경영전략부문</option>
+                                                                                                     
+                                                                                           <option value="S0115">구매부문</option>
+                                                                                                     
+                                                                                           <option value="S0120">재무부문</option>
+                                                                                                     
+                                                                                           <option value="S0125">인사부문</option>
+                                                                                                     
+                                                                                           <option value="S0130">해외영업팀</option>
+                                                                                                     
+                                                                                           <option value="S0135">환경안전팀</option>
+                                                                                                     
+                                                                                           <option value="S0140">품질보증팀</option>
+                                                                                                     
+                                                                                           <option value="S0145">반도체사업총괄</option>
+                                                                                                     
+                                                                                           <option value="S0150">Diffusion 사업총괄</option>
+                                                                                                     
+                                                                                           <option value="S0155">반도체연구소</option>
+                                                                                                     
+                                                                                           <option value="S0160">Display사업총괄</option>
+                                                                                                     
+                                                                                           <option value="S0165">SEC영업1본부</option>
+                                                                                                     
+                                                                                           <option value="S0170">SEC영업2본부</option>
+                                                                                  
+                                                                            </select></p>
+                            </td>
+                            <td width="100" height="37" bgcolor="#F1F1F1" class="tb_mid">
+                                <p align="center">부서</p>
+                            </td>
+                            <td width="132" height="37" bgcolor="white" class="tb_mid">
+                                     &nbsp;<input type="text" name="deptname" size="16" value=""></td>
+                            <td width="36" height="37" bgcolor="white" class="tb_mid">
+                                <p align="center">
+                                        <a href="javascript:na_open_window('buseo', '../org/org_b_tree.asp', 0, 0, 350, 370, 0, 0, 1, 1, 1)">
+                                             <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                        </a>
+                                </p>
+                            </td>
+                            <td width="101" height="37" bgcolor="#F1F1F1" class="tb_mid">
+                                <p align="center">분류</p>
+                            </td>
+                            <td width="127" height="37" bgcolor="white" class="tb_mid">
+                                <p>&nbsp;<select name="b_kind" size="1">
+                                                        <option value="">선택</option>
+                                                                
+                                                                                           <option value="B0020">개발</option>
+                                                                                                     
+                                                                                           <option value="B0030">구매</option>
+                                                                                                     
+                                                                                           <option value="B0042">품질</option>
+                                                                                                     
+                                                                                           <option value="B0044">C/S</option>
+                                                                                                     
+                                                                                           <option value="B0055">사업기획</option>
+                                                                                                     
+                                                                                           <option value="B0065">R&amp;D</option>
+                                                                                                     
+                                                                                           <option value="B0070">영업</option>
+                                                                                                     
+                                                                                           <option value="B0080">인사</option>
+                                                                                                     
+                                                                                           <option value="B0090">재무</option>
+                                                                                                     
+                                                                                           <option value="B0101">제조</option>
+                                                                                                     
+                                                                                           <option value="B0105">준법</option>
+                                                                                                     
+                                                                                           <option value="B0120">환경</option>
+                                                                                                     
+                                                                                           <option value="B0130">정보</option>
+                                                                                                     
+                                                                                           <option value="B0999">공개학습</option>
+                                                                                  
+                                                                            </select></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="94" height="19" class="tb_mid" bgcolor="#F1F1F1">
+                                <p align="center">학습조직리더</p>
+                            </td>
+                            <td width="126" height="38" bgcolor="white" class="tb_mid">
+                                <input type="hidden" name="leader_code">
+                                <input type="hidden" name="leader_id">
+                                                                &nbsp;<input type="text" name="leader_nm" size="15"></td>
+                            <td width="35" height="38" bgcolor="white" class="tb_mid">
+                                <p align="center">
+                                       <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
+                                              <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                       </a>
+                                </p>
+                            </td>
+                            <td width="100" height="38" bgcolor="white" class="tb_mid">&nbsp;<input type="text" name="leader_posnm" size="10" readonly=""></td>
+                            <td width="168" height="38" bgcolor="white" class="tb_mid" colspan="2">&nbsp;</td>
+                            <td width="101" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
+                            <td width="127" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="94" height="89" bgcolor="#F1F1F1" class="tb_mid">
+                                <p align="center">구성원</p>
+                            </td>
+                            <td width="530" height="89" bgcolor="white" class="tb_mid" colspan="6">
+                                    &nbsp;<textarea name="st_member" rows="5" cols="72"></textarea>
+                            </td>
+                            <td width="127" height="89" bgcolor="white" class="tb_mid">&nbsp;
+                                   <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search2.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
+                                      <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                    </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="94" height="97" bgcolor="#F1F1F1" class="tb_mid">
+                                <p align="center">설명</p>
+                            </td>
+                            <td width="657" height="97" bgcolor="white" class="tb_mid" colspan="7">
+                                   &nbsp;<textarea name="str_o_remark" rows="5" cols="102"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="94" height="19" bgcolor="white" class="tb_bottom">
+                                <p align="center">&nbsp;
+                                </p>
+                            </td>
+                            <td width="161" height="19" bgcolor="white" class="tb_bottom" colspan="2">
+                                <p align="center">&nbsp;</p>
+                            </td>
+                            <td width="100" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                            <td width="168" height="19" bgcolor="white" class="tb_bottom" colspan="2">&nbsp;</td>
+                            <td width="101" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                            <td width="127" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td width="765" height="32" align="left" valign="middle" colspan="2">
+                    <p align="center"><input type="submit" name="formbutton3" value="저장">  <input type="reset" name="formbutton3" value=" 취    소  "> </p>
+                </td>
+            </tr>
+    </tbody></table>
+    </form>
+ 
 
  <!-- ----------------------------------------------------------------------->
-<form name="form" action="" method="post">
-<input type="hidden" name="deptid" value="">
-<table cellpadding="0" cellspacing="0" height="392" width="765">
-    <tbody><tr>
-                <td width="22" height="32">
-                    <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
-                </td>
-                <td width="743" height="32"><b><font size="2" color="#3B608D">학습조직 등록</font></b></td>
-    </tr>
-        <tr>
-            <td width="765" height="328" align="left" valign="top" colspan="2">
-                <table cellspacing="0" bordercolordark="white" bordercolorlight="#D4D2D2" width="751" height="319" bordercolor="white" cellpadding="0">
-                    <tbody><tr>
-                        <td width="94" height="39" class="tb_top" bgcolor="#F1F1F1">
-                            <p align="center">학습조직명</p>
-                        </td>
-                        <td width="657" height="39" bgcolor="white" class="tb_top" colspan="7">
-                            <p align="left">&nbsp;<input type="text" name="str_o_nm" size="101"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="94" height="37" class="tb_mid" bgcolor="#F1F1F1">
-                            <p align="center">사업부</p>
-                        </td>
-                        <td width="161" height="37" bgcolor="white" class="tb_mid" colspan="2">
-                            <p>&nbsp;<select name="saubu" size="1">
-                                					<option value="">선택</option>
-                                	        				
-																			   		<option value="S0110">경영전략부문</option>
-																			     				
-																			   		<option value="S0115">구매부문</option>
-																			     				
-																			   		<option value="S0120">재무부문</option>
-																			     				
-																			   		<option value="S0125">인사부문</option>
-																			     				
-																			   		<option value="S0130">해외영업팀</option>
-																			     				
-																			   		<option value="S0135">환경안전팀</option>
-																			     				
-																			   		<option value="S0140">품질보증팀</option>
-																			     				
-																			   		<option value="S0145">반도체사업총괄</option>
-																			     				
-																			   		<option value="S0150">Diffusion 사업총괄</option>
-																			     				
-																			   		<option value="S0155">반도체연구소</option>
-																			     				
-																			   		<option value="S0160">Display사업총괄</option>
-																			     				
-																			   		<option value="S0165">SEC영업1본부</option>
-																			     				
-																			   		<option value="S0170">SEC영업2본부</option>
-																			  
-																		</select></p>
-                        </td>
-                        <td width="100" height="37" bgcolor="#F1F1F1" class="tb_mid">
-                            <p align="center">부서</p>
-                        </td>
-                        <td width="132" height="37" bgcolor="white" class="tb_mid">
-                        	     &nbsp;<input type="text" name="deptname" size="16" value=""></td>
-                        <td width="36" height="37" bgcolor="white" class="tb_mid">
-                            <p align="center">
-                            	    <a href="javascript:na_open_window('buseo', '../org/org_b_tree.asp', 0, 0, 350, 370, 0, 0, 1, 1, 1)">
-                            	    	 <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
-                            	    </a>
-                            </p>
-                        </td>
-                        <td width="101" height="37" bgcolor="#F1F1F1" class="tb_mid">
-                            <p align="center">분류</p>
-                        </td>
-                        <td width="127" height="37" bgcolor="white" class="tb_mid">
-                            <p>&nbsp;<select name="b_kind" size="1">
-                                					<option value="">선택</option>
-                                	        				
-																			   		<option value="B0020">개발</option>
-																			     				
-																			   		<option value="B0030">구매</option>
-																			     				
-																			   		<option value="B0042">품질</option>
-																			     				
-																			   		<option value="B0044">C/S</option>
-																			     				
-																			   		<option value="B0055">사업기획</option>
-																			     				
-																			   		<option value="B0065">R&amp;D</option>
-																			     				
-																			   		<option value="B0070">영업</option>
-																			     				
-																			   		<option value="B0080">인사</option>
-																			     				
-																			   		<option value="B0090">재무</option>
-																			     				
-																			   		<option value="B0101">제조</option>
-																			     				
-																			   		<option value="B0105">준법</option>
-																			     				
-																			   		<option value="B0120">환경</option>
-																			     				
-																			   		<option value="B0130">정보</option>
-																			     				
-																			   		<option value="B0999">공개학습</option>
-																			  
-																		</select></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="94" height="19" class="tb_mid" bgcolor="#F1F1F1">
-                            <p align="center">학습조직리더</p>
-                        </td>
-                        <td width="126" height="38" bgcolor="white" class="tb_mid">
-                        	<input type="hidden" name="leader_code">
-                        	<input type="hidden" name="leader_id">
-															&nbsp;<input type="text" name="leader_nm" size="15"></td>
-                        <td width="35" height="38" bgcolor="white" class="tb_mid">
-                            <p align="center">
-                            	   <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
-                            	   	   <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
-                            	   </a>
-                            </p>
-                        </td>
-                        <td width="100" height="38" bgcolor="white" class="tb_mid">&nbsp;<input type="text" name="leader_posnm" size="10" readonly=""></td>
-                        <td width="168" height="38" bgcolor="white" class="tb_mid" colspan="2">&nbsp;</td>
-                        <td width="101" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
-                        <td width="127" height="38" bgcolor="white" class="tb_mid">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td width="94" height="89" bgcolor="#F1F1F1" class="tb_mid">
-                            <p align="center">구성원</p>
-                        </td>
-                        <td width="530" height="89" bgcolor="white" class="tb_mid" colspan="6">
-                        	    &nbsp;<textarea name="st_member" rows="5" cols="72"></textarea>
-                        </td>
-                        <td width="127" height="89" bgcolor="white" class="tb_mid">&nbsp;
-                        	   <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search2.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
-                            	  <img src="../images/S_Toolbar.gif" width="16" height="16" border="0">
-                            	</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="94" height="97" bgcolor="#F1F1F1" class="tb_mid">
-                            <p align="center">설명</p>
-                        </td>
-                        <td width="657" height="97" bgcolor="white" class="tb_mid" colspan="7">
-                        	   &nbsp;<textarea name="str_o_remark" rows="5" cols="102"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="94" height="19" bgcolor="white" class="tb_bottom">
-                            <p align="center">&nbsp;
-                            </p>
-                        </td>
-                        <td width="161" height="19" bgcolor="white" class="tb_bottom" colspan="2">
-                            <p align="center">&nbsp;</p>
-                        </td>
-                        <td width="100" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
-                        <td width="168" height="19" bgcolor="white" class="tb_bottom" colspan="2">&nbsp;</td>
-                        <td width="101" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
-                        <td width="127" height="19" bgcolor="white" class="tb_bottom">&nbsp;</td>
-                    </tr>
-                </tbody></table>
-            </td>
-        </tr>
-        <tr>
-            <td width="765" height="32" align="left" valign="middle" colspan="2">
-                <p align="center"><input type="button" name="formbutton3" value=" 저    장  " onclick="sendit();">  <input type="reset" name="formbutton3" value=" 취    소  "> </p>
-            </td>
-        </tr>
-</tbody></table>
-</form>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">

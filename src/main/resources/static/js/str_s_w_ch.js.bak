@@ -1,0 +1,84 @@
+function sendit()
+{
+	var f = document.form;
+		
+	  if(f.str_s_title.value.length == ''){
+			alert("학습제목을 입력 하세요.");
+			f.str_d_title.focus();
+			return false;
+		}
+		
+	  if(f.str_sch_dt.value.length == ''){
+			alert("학습계획일을 입력 하세요.");
+			f.str_sch_dt.focus();
+			return false;
+		}
+						
+		if(f.str_s_kind.value.length == ''){
+			alert("분류를 선택 하세요.");
+			f.str_s_kind.focus();
+			return false;
+		}
+		
+		
+		if(f.leader_nm.value.length == ''){
+			alert("학습 진행자를  입력 하세요.");
+			f.leader_nm.focus();
+			return false;
+		}
+		    
+   quet = confirm ("저장하시겠습니까?.")
+    if (quet==true){
+    document.form.action="s_sch_form_in.asp" 	
+    document.form.submit();
+
+    }
+    
+    if (quet==false){
+       return false;
+       }   
+	
+}
+
+
+function edit_sendit()
+{
+	var f = document.form;
+		
+	  if(f.str_s_title.value.length == ''){
+			alert("학습제목을 입력 하세요.");
+			f.str_d_title.focus();
+			return false;
+		}
+		
+	  if(f.str_sch_dt.value.length == ''){
+			alert("학습계획일을 입력 하세요.");
+			f.str_sch_dt.focus();
+			return false;
+		}
+						
+		if(f.str_s_kind.value.length == ''){
+			alert("분류를 선택 하세요.");
+			f.str_s_kind.focus();
+			return false;
+		}
+		
+		
+		if(f.leader_nm.value.length == ''){
+			alert("학습 진행자를  입력 하세요.");
+			f.leader_nm.focus();
+			return false;
+		}
+		    
+   quet = confirm ("저장하시겠습니까?.")
+    if (quet==true){
+    document.form.action="s_sch_form_in.asp" 	
+    document.form.submit();
+
+    }
+    
+    if (quet==false){
+       return false;
+       }   
+	
+}

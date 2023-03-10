@@ -348,8 +348,20 @@ public class ProductController {
 	
 	
 	}
+///////////////////////////////////////////////////////////////////////////
 	
+	
+	// 학습조직 등록
+	@RequestMapping("/Mng_Study_org_register_result")
+	public String Mng_Study_org_register_result() {
+		System.out.println("----------/Into Mng_Study_org_register_result<--------");
+		return "Mng_Study_org_register_result";
+	}
 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////
+	
 	@RequestMapping("/testzone")
 	public String testzone() {
 		System.out.println("----------/Into testzone<--------");

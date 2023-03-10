@@ -177,207 +177,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
+              
                 <!-- End of Topbar -->
 
 
@@ -390,9 +190,126 @@
   <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
+  <%@ page import="java.sql.*" %>
+  <%
+      Connection conn = null;
+      Statement stmt = null;
+      ResultSet rs = null;
+  
+      try {
+          // JDBC 드라이버 클래스 로드
+          Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+  
+          // 데이터베이스 연결 정보 설정
+          String url = "jdbc:sqlserver://localhost:1433;databaseName=EHRD_TEMP;encrypt=true;trustServerCertificate=true";
+          String user = "sa";
+          String password = "1qazxsw2";
+  
+          // 데이터베이스 연결 생성
+          conn = DriverManager.getConnection(url, user, password);
+  
+          // SQL 쿼리 실행
+          String sql = " select  str_o_nm,str_o_saubu,str_o_kind,str_o_b_code,str_o_lder_code,str_o_lder_nm,insrt_dt,str_o_key,str_o_key from STR_ORG_MAST";
+          stmt = conn.createStatement();
+          rs = stmt.executeQuery(sql);
+  
+          // 결과 출력
+
+          out.println("<table border='0' width='866' height='84' cellspacing='0'>");
+          out.println("<div align='left'>");
+          out.println("<form name='form'   method='post' action=''>");
+
+          out.println("<tr>");
+          out.println("<td class='bdTop_section' width='30'   height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>NO</font></b></p>");
+          out.println("</td>");
+          out.println("<td width='317' height='26' class='bdTop_section'>");
+          out.println("<p align='center'><b><font color='#3B608D'>학습조직명</font></b></p>");
+          out.println("</td>");
+          out.println("<td class='bdTop_section'  width='59' height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>사업부</font></b></p>");
+          out.println("</td>");
+          out.println("<td class='bdTop_section' width='104' height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>소속팀</font></b></p>");
+          out.println("</td>");
+          out.println("<td class='bdTop_section' width='53' height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>분류</font></b></p>");
+          out.println("</td>");
+          out.println("<td class='bdTop_section' width='59' height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>리더</font></b></p>");
+          out.println("</td>");
+          out.println("<td class='bdTop_section' width='89' height='26'>");
+          out.println("<p align='center'><b><font color='#3B608D'>개설일</font></b></p>");
+          out.println("</td>");
+          out.println("<td width='52' height='26' class='bdTop_section'>");
+          out.println("<p align='center'><b><font color='#3B608D'>자료수</font></b></p>");
+          out.println("</td>");
+          out.println("<td width='85' height='26' class='bdTop_section'>");
+          out.println("<p align='center'><b><font color='#3B608D'>구성원</font></b></p>");
+          out.println("</td>");
+          out.println("</tr>");
+     %>
+
+     <tr>
+        <td class="bdTop_line" width="30" height="1"></td>
+        <td width="317" height="1" class="bdTop_line"></td>
+        <td width="59" height="1" class="bdTop_line"></td>
+        <td width="104" height="1" class="bdTop_line"></td>
+        <td width="53" height="1" class="bdTop_line"></td>
+        <td width="59" height="1" class="bdTop_line"></td>
+        <td width="89" height="1" class="bdTop_line"></td>
+        <td width="52" height="1" class="bdTop_line"></td>
+        <td width="85" height="1" class="bdTop_line"></td>
+</tr>
+<tr>
+    <td class="bdTop_shadow" width="30" height="2"></td>
+<td width="317" height="2" class="bdTop_shadow"></td>
+<td width="59" height="2" class="bdTop_shadow"></td>
+<td width="104" height="2" class="bdTop_shadow"></td>
+<td width="53" height="2" class="bdTop_shadow"></td>
+<td width="59" height="2" class="bdTop_shadow"></td>
+<td width="89" height="2" class="bdTop_shadow"></td>
+<td width="52" height="2" class="bdTop_shadow"></td>
+<td width="85" height="2" class="bdTop_shadow"></td>
+</tr> 
+
+     <%
+    
+            int i = 0;
+          while (rs.next()) {
+                     i =i + 1;
+
+                    out.println("<tr>");
+                        out.println("<td align='center'>" + i + "</td>");                                          
+                       
+                        out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getString("str_o_nm") + "</td>");
+                        out.println("<td align='center' width='317' height='1' class='bdTop_shadow'>" + rs.getString("str_o_saubu") + "</td>");
+                        out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_kind") + "</td>");
+                        out.println("<td align='center' width='104' height='1' class='bdTop_shadow'>" + rs.getString("str_o_b_code") + "</td>");
+                        out.println("<td align='center' width='53' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_code") + "</td>");
+                        out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_nm") + "</td>");
+                        out.println("<td align='center' width='89' height='1' class='bdTop_shadow'>" + rs.getString("insrt_dt") + "</td>");
+                        out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getInt("str_o_key") + "</td>");
+                        out.println("</tr>");
+         
+            //     out.println(rs.getString("minor_cd") + "/////////////////////// " + rs.getString("minor_nm"));
+          }
+
+          out.println("</table>");
+          out.println("</form>");
+          out.println("</div>");
+      } catch (Exception e) {
+          e.printStackTrace();
+      } finally {
+          // 리소스 반환
+          try { rs.close(); } catch (Exception e) { }
+          try { stmt.close(); } catch (Exception e) { }
+          try { conn.close(); } catch (Exception e) { }
+      }
+  %>
 
 
-
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
 
@@ -400,82 +317,12 @@
 
 
   
-  <div align="left">
-    <form name="form"   method="post" action="">
-    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="865">
-                <tr>
-            <td class="tb_bottom" width="22" height="37">
-                <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
-            </td>
-            <td width="133" height="37" class="tb_bottom"><b><font size="2" color="#3B608D">학습조직현황</font></b>        	      </td>
-                    <td width="100" height="37" class="tb_bottom">
-                                    <a href="./s_org_form.asp">학습조직등록</a>                
-                    </td>
-                    <td width="91" height="37" class="tb_bottom">
-                                    &nbsp;</td>
-                    <td width="519" height="37" class="tb_bottom">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td width="865" height="32" class="tb_bottom" colspan="5">
-                        <table cellpadding="0" cellspacing="0" height="26" width="847">
-                            <tr>
-                                <td  width="32" height="26">&nbsp;</td>
-                                <td  width="73" height="26">
-                                    <p align="center">사업부</p>
-                                </td>
-                                <td  width="86" height="26">&nbsp;</td>
-                                <td  width="76" height="26">
-                                    <p align="center">분류</p>
-                                </td>
-                                <td  width="66" height="26">&nbsp;</td>
-                                <td  width="65" height="26">
-                                    <p align="center">리더</p>
-                                </td>
-                                <td  width="78" height="26">&nbsp;</td>
-                                <td  width="82" height="26">
-                                    <p align="center">학습조직명</p>
-                                </td>
-                                <td  width="194" height="26">&nbsp;</td>
-                                <td  width="58" height="26">&nbsp;</td>
-                                <td  width="20" height="26">&nbsp;</td>
-                                <td  width="17" height="26">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-    </table>
-    <table border="0" width="866" height="84" cellspacing="0">
-                <tr>
-                    <td class="bdTop_section" width="30"   height="26">
-                        <p align="center"><b><font color="#3B608D">NO</font></b></p>
-                    </td>
-                    <td width="317" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">학습조직명</font></b></p>
-                    </td>
-                    <td class="bdTop_section"  width="59" height="26">
-                        <p align="center"><b><font color="#3B608D">사업부</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="104" height="26">
-                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="53" height="26">
-                        <p align="center"><b><font color="#3B608D">분류</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="59" height="26">
-                        <p align="center"><b><font color="#3B608D">리더</font></b></p>
-                    </td>
-                    <td class="bdTop_section" width="89" height="26">
-                        <p align="center"><b><font color="#3B608D">개설일</font></b></p>
-                    </td>
-                    <td width="52" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">자료수</font></b></p>
-                    </td>
-                    <td width="85" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">구성원</font></b></p>
-                    </td>
-                </tr>
+  
+    
+    
+   
         <tr>
-                            <td class="bdTop_line" width="30" height="1"></td>
+                    <td class="bdTop_line" width="30" height="1"></td>
                     <td width="317" height="1" class="bdTop_line"></td>
                     <td width="59" height="1" class="bdTop_line"></td>
                     <td width="104" height="1" class="bdTop_line"></td>
@@ -497,9 +344,9 @@
                     <td width="85" height="2" class="bdTop_shadow"></td>
         </tr> 
                  
-    </table>
-    </form>
-    </div>
+    
+    
+    
 
 
  <!-- -----------------------------------------------------------------------
