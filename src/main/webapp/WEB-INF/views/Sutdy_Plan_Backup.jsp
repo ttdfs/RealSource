@@ -25,6 +25,9 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+
+    
 </head>
 
 <body id="page-top">
@@ -68,18 +71,18 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>학습조직</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">우리학습조직:</h6>
-                        <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
-                        <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
-                        <a class="collapse-item" href="Sutdy_cards">Cards</a>
-                    </div>
-                </div>
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">우리학습조직:</h6>
+                        <a class="collapse-item active" href="Sutdy_Plan">학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
+                       
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">전체학습조직:</h6>
-                        <a class="collapse-item active" href="Sutdy_Full_plan">전체학습계획</a>                        
+                        <a class="collapse-item" href="Sutdy_Full_plan">전체학습계획</a>                        
                         <a class="collapse-item" href="Sutdy_Full_Meterial">전체학습자료실</a>
                         <a class="collapse-item" href="Open_Sutdy_Full_Meterial">공개학습자료실</a>
                         <a class="collapse-item" href="Old_Sutdy_Full_Meterial">구_전체학습자료실</a>
@@ -177,7 +180,10 @@
             <div id="content">
 
                 <!-- Topbar -->
-               
+            
+
+                    <!-- Topbar Navbar -->
+                   
                 <!-- End of Topbar -->
 
 
@@ -192,16 +198,15 @@
 
 
 
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
 
-
-  
 
 
 
   <div align="left">
-    <form name="form"   method="post" action="s_sch_all_s_list.asp">
+    <form name="form"   method="post" action="s_sch_s_list.asp">
     <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="1127">
                 <tr>
             <td class="tb_bottom" width="22" height="37">
@@ -220,11 +225,11 @@
                     <td width="1127" height="32" class="tb_bottom" colspan="5">
                         <table cellpadding="0" cellspacing="0" height="26" width="1109">
                             <tr>
-                                <td width="13" height="26">&nbsp;</td>
-                                <td width="57" height="26">
+                                <td width="32" height="26">&nbsp;</td>
+                                <td width="73" height="26">
                                     <p align="center">사업부</p>
                                 </td>
-                                <td width="96" height="26">
+                                <td width="80" height="26">
                                                                         &nbsp;
                                                                <select name="str_s_saubu_s" size="1">
                                                                            <option value="">전체</option>
@@ -256,47 +261,63 @@
                                                                         <option value="S0170">SEC영업2본부</option>
                                                                
                                             </select> 			
-                                                            </td> 
-                                <td width="50" height="26">
-                                    <p align="center">팀명</p>
-                                </td>
-                                <td width="132" height="26">
-                                                                            &nbsp;<input type="text" name="deptnm_s"  size="10">																
                                                             </td>
-                                <td width="56" height="26">
+                                <td width="63" height="26">
+                                    <p align="center">분류</p>
+                                </td>
+                                <td width="79" height="26">
+                                                                            &nbsp;
+                                                               <select name="str_s_kind_s" size="1">
+                                                                                   <option value="">전체</option>
+                                                                            
+                                                                        <option value="B0020">개발</option>
+                                                                            
+                                                                        <option value="B0030">구매</option>
+                                                                            
+                                                                        <option value="B0042">품질</option>
+                                                                            
+                                                                        <option value="B0044">C/S</option>
+                                                                            
+                                                                        <option value="B0055">사업기획</option>
+                                                                            
+                                                                        <option value="B0065">R&D</option>
+                                                                            
+                                                                        <option value="B0070">영업</option>
+                                                                            
+                                                                        <option value="B0080">인사</option>
+                                                                            
+                                                                        <option value="B0090">재무</option>
+                                                                            
+                                                                        <option value="B0101">제조</option>
+                                                                            
+                                                                        <option value="B0105">준법</option>
+                                                                            
+                                                                        <option value="B0120">환경</option>
+                                                                            
+                                                                        <option value="B0130">정보</option>
+                                                                            
+                                                                        <option value="B0999">공개학습</option>
+                                                               
+                                            </select> 																		
+                                                            </td>
+                                <td width="65" height="26">
                                     <p align="center">진행자</p>
                                 </td>
-                                <td width="85" height="26">
+                                <td width="78" height="26">
                                                                                         &nbsp;<input type="text" name="leader_nm_s" size="7">
                                                         </td>
-                                <td width="61" height="26">
+                                <td width="80" height="26">
                                     <p align="center">제 목</p>
                                 </td>
                                 <td width="173" height="26">&nbsp;
                                                           &nbsp;<input type="text" name="str_s_title_s" size="20">
                                 </td>
                                 <td width="64" height="26">
-                                    <p align="center">계획월</p>
+                                    <p align="center">                            	            계획월</p>
                                 </td>
-                                <td width="78" height="26">&nbsp;<input type="text" name="yyyy_s" value="2023" size="5"></td>
-                                <td width="63" height="26">
-                                      <select name="mm_s">
-                                            <option value="">선택</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                      </select>
-                                </td>
-                                <td width="181" height="26">&nbsp;<input type="submit" name="str_button" value="검 색">
+                                <td width="78" height="26">&nbsp;&nbsp;</td>
+                                <td width="62" height="26">&nbsp;</td>
+                                <td width="182" height="26">&nbsp;<input type="submit" name="str_button" value="검 색">
                                 </td>
                             </tr>
                         </table>
@@ -356,334 +377,96 @@
                     <td width="115" height="2" class="bdTop_shadow"></td>
                     <td width="65" height="2" class="bdTop_shadow"></td>
         </tr> 
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">297</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-11-25</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">09:00~10:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">개발</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16065">Application-S/H 유전체에 따른 공정 결과 review</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">SERP (Scientific Engineering for RF / Plsma)</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">플라즈마 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">오병욱</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">296</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-11-11</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">09:00~10:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">개발</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16064">Application-두께에 따른 clean time 선정</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">SERP (Scientific Engineering for RF / Plsma)</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">플라즈마 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">이민희</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">295</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-28</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">09:00~10:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">개발</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16063">Application-Cuarto Oxolume RF Sequence analysis</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">SERP (Scientific Engineering for RF / Plsma)</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">플라즈마 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">정남식</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">294</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-23</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">16:00~17:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;동탄사업장 4층</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">제조</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16087">SP.Ver O2 Analiyzer Offline 점검 Point</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">반도체 장비는 내손에</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">생산기술 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">김문식</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">293</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-21</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">14:00~15:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 중회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">구매</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16050">WMS 재고 속성변경 방법</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">구매지원</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">구매지원 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">이영진</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">292</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-16</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">16:00~17:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;동탄사업장 4층</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">제조</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16086">고객사별 Packing 특이사항</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">반도체 장비는 내손에</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">생산기술 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">신주홍</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">291</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-14</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">09:00~10:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">개발</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16062">Application-Cuarto VS CEX experiment review</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">SERP (Scientific Engineering for RF / Plsma)</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">플라즈마 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">신예진</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">290</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-10-07</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">14:00~15:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 중회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">구매</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16049">물류의 역사</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">구매지원</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">구매지원 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">조주형</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">289</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-09-25</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">16:00~17:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;동탄사업장 4층</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">제조</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16085">SCM 활용 법</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">반도체 장비는 내손에</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">생산기술 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">문종백</p>
-            </td>
-        </tr>
-        
-         
-         <tr>
-            <td class="tb_mid4" width="55" height="26">
-                <p align="center">288</p>
-            </td>
-            <td width="92" height="26" class="tb_mid4">
-                <p align="center">2020-09-23</p>
-            </td>
-                    <td width="108" height="26" class="tb_mid4">
-                        <p align="center">14:00~15:00</p>
-                    </td>
-                    <td width="151" height="26" class="tb_mid4">
-                        <p align="center">&nbsp;8층 중회의실</p>
-                    </td>
-            <td width="49" height="26" class="tb_mid4">
-                <p align="center">구매</p>
-            </td>
-            <td width="350" height="26" class="tb_mid4">&nbsp;<a href="./s_sch_all_content.asp?str_s_key=16048">효율적인 공장운영을 위한 공장물류관리 핵심포인트</a></td>
-            <td class="tb_mid4" width="124" height="26">
-                <p align="center">구매지원</p>
-            </td>
-            <td class="tb_mid4" width="115" height="26">
-                <p align="center">구매지원 G</p>
-            </td>
-            <td class="tb_mid4" width="65" height="26">
-                <p align="center">박성현</p>
-            </td>
-        </tr>
-        
        
           
-        <tr>
-             <td width="1125" height="28" class="tb_bottom" colspan="9">
-                 <p align="center">&nbsp;
-               
-             
-                        [<font color="blue">1</font>]
-                     
-                        [<a href="s_sch_all_list.asp?page=2">2</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=3">3</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=4">4</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=5">5</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=6">6</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=7">7</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=8">8</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=9">9</a>]
-                     
-                        [<a href="s_sch_all_list.asp?page=10">10</a>]
-                     
-                      <a href="s_sch_all_list.asp?page=11">다음</a>
-                  
-                                
-                 </p>
-             </td>
-         </tr>
+        
+
+
+
+
+         <%@ page import="java.sql.*" %>
+         <%@ page import="java.util.ArrayList" %>
+         <%@ page import="java.util.HashMap" %>
+         <%@ page import="java.util.List" %>
+         <%@ page import="java.util.Map" %>
+
+         <%
+             Connection conn = null;
+             Statement stmt = null;
+             ResultSet rs = null;
+         
+             try {
+                 // JDBC 드라이버 클래스 로드
+                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+         
+                 // 데이터베이스 연결 정보 설정
+                 String url = "jdbc:sqlserver://localhost:1433;databaseName=EHRD_TEMP;encrypt=true;trustServerCertificate=true";
+                 String user = "sa";
+                 String password = "1qazxsw2";
+         
+                 // 데이터베이스 연결 생성
+                 conn = DriverManager.getConnection(url, user, password);
+         
+                 // SQL 쿼리 실행
+                 String sql = " select  str_o_nm,str_o_saubu,str_o_kind,str_o_b_code,str_o_lder_code,str_o_lder_nm,insrt_dt,str_o_key,str_o_key from STR_ORG_MAST";
+                 stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                 rs = stmt.executeQuery(sql);
+         
+                
+          
+
+
+                 /////////////////////////////////////////////////////////////
+                 // 결과 출력   
+                   int ii = 0;
+                 while (rs.next()) {
+                            ii =ii + 1;
+       
+                           out.println("<tr>");
+                               out.println("<td align='center'>" + ii + "</td>");                                          
+                              
+                               out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getString("str_o_nm") + "</td>");
+                               out.println("<td align='center' width='317' height='1' class='bdTop_shadow'>" + rs.getString("str_o_saubu") + "</td>");
+                               out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_kind") + "</td>");
+                               out.println("<td align='center' width='104' height='1' class='bdTop_shadow'>" + rs.getString("str_o_b_code") + "</td>");
+                               out.println("<td align='center' width='53' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_code") + "</td>");
+                               out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_nm") + "</td>");
+                               out.println("<td align='center' width='89' height='1' class='bdTop_shadow'>" + rs.getString("insrt_dt") + "</td>");
+                               out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getInt("str_o_key") + "</td>");
+                               out.println("</tr>");
+                
+                   //     out.println(rs.getString("minor_cd") + "/////////////////////// " + rs.getString("minor_nm"));
+                 
+                
+                 }
+       
+              
+             } catch (Exception e) {
+                 e.printStackTrace();
+             } finally {
+                 // 리소스 반환
+                 try { rs.close(); } catch (Exception e) { }
+                 try { stmt.close(); } catch (Exception e) { }
+                 try { conn.close(); } catch (Exception e) { }
+             }
+         %>
+       
+
+
+
+
+
     </table>
     </form>
     </div>
 
-  <!--   ---------------------------------------------------------------------------------- 
+
+
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
             <!-- Footer -->

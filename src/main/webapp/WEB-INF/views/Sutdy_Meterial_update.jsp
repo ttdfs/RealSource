@@ -200,7 +200,7 @@
 
 
 <div align="left">
-<form name="form"   method="post" action="Sutdy_Meterial_update">
+<form name="form"   method="post" action="s_dat_s_list.asp">
 <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="865">
             <tr>
         <td class="tb_bottom" width="22" height="37">
@@ -229,34 +229,29 @@
             
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">학습조직명:</label>
-            <input name="recipient-name" type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">사업부:</label>
-            <textarea name="message-text" class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">소속팀:</label>
-            <textarea name="message-text2" class="form-control" id="message-text2"></textarea>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">분류:</label>
-            <textarea name="message-text3" class="form-control" id="message-text3"></textarea>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">리더:</label>
-            <textarea name="message-text4" class="form-control" id="message-text4"></textarea>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-          <input type="submit" class="btn btn-primary" name="str_button" value="저장">
         </form>
-        
-
-  
       </div>
       <div class="modal-footer">
-      <!--   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-     <!--   <button type="button" class="btn btn-primary">Send message</button> -->
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
@@ -419,6 +414,15 @@
 
     <%@ page import="java.sql.*" %>
     <%
+
+        System.out.println("Sutdy_Meterial_update 화면으로 들어옴 ----학습조직명--------"+ request.getParameter("recipient-name"));
+        System.out.println("Sutdy_Meterial_update 화면으로 들어옴 -----사업부------"+ request.getParameter("message-text"));
+        System.out.println("Sutdy_Meterial_update 화면으로 들어옴 -------소속팀-----"+ request.getParameter("message-text2"));
+        System.out.println("Sutdy_Meterial_update 화면으로 들어옴 ------분류------"+ request.getParameter("message-text3"));
+        System.out.println("Sutdy_Meterial_update 화면으로 들어옴 -------리더-----"+ request.getParameter("message-text4"));
+
+
+
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;

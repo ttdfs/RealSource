@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +29,16 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+<%
+
+System.out.println(request.getParameter("emp_id"));
+
+// 들어온 아이디  세션에 저장함
+session.setAttribute("emp_id", request.getParameter("emp_id"));
+
+System.out.println(session.getAttribute("emp_id")); 
+
+%>
 
 <body id="page-top">
 
@@ -95,7 +108,7 @@
                     </div>
                 </div>
             </li>
-            ${emp_id}
+          
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"

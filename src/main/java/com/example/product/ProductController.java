@@ -362,6 +362,19 @@ public class ProductController {
 	
 	/////////////////////////////////////////////////////////////////////////////////////
 	
+	
+	
+	// 학습 등록
+		@RequestMapping("/Sutdy_Meterial_update")
+		public String Sutdy_Meterial_update() {
+			System.out.println("----------/Into Sutdy_Meterial_update 컨트롤러로 들어옴<--------");
+			return "Sutdy_Meterial_update";
+		}
+
+		
+		
+		/////////////////////////////////////////////////////////////////////////////////////
+	
 	@RequestMapping("/testzone")
 	public String testzone() {
 		System.out.println("----------/Into testzone<--------");

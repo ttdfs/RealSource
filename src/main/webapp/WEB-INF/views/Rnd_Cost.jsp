@@ -16,6 +16,10 @@
 
     <title>경영지원 Portal 시스템</title>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -26,7 +30,41 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <style type="text/css">
+                    form {
+                width: 500px;
+                }
+                table {
+                border-collapse:collapse;
+                margin-bottom: 10px;
+                }
+                th, td {
+                padding: 3px 10px;
+                }
+                .off-screen {
+                display: none;
+                }
+                #nav {
+                width: 500px;
+                text-align: center;
+                }
+                #nav a {
+                display: inline-block;
+                padding: 3px 5px;
+                margin-right: 10px;
+                font-family:Tahoma;
+                background: #ccc;
+                color: #000;
+                text-decoration: none;
+                }
+                #nav a.active {
+                background: #333;
+                color: #fff;
+                }
+        </style>
 
+    
+    
 </head>
 
 <body id="page-top">
@@ -70,12 +108,12 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>학습조직</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">우리학습조직:</h6>
-                        <a class="collapse-item" href="Sutdy_Plan">학습계획</a>                        
+                        <a class="collapse-item active" href="Sutdy_Plan">학습계획</a>                        
                         <a class="collapse-item" href="Sutdy_Meterial">학습자료실</a>
-               
+                       
                     </div>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -90,7 +128,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">관리메뉴:</h6>
-                        <a class="collapse-item" href="Mng_Study_org_register.jsp">학습조직등록</a>  
+                        <a class="collapse-item" href="Mng_Study_org_register">학습조직등록</a>  
                         <a class="collapse-item" href="Mng_Study_org">학습조직관리</a>                        
                         <a class="collapse-item" href="Mng_Study_Meterial">학습자료열람관리</a>
                         <a class="collapse-item" href="Request_Study_quest">개인열람요청현황</a>
@@ -179,207 +217,10 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+            
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
+                   
                 <!-- End of Topbar -->
 
 
@@ -389,105 +230,207 @@
 
 
 
-  <!--시작 메인 페이지----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<button id="submit-btn">Submit Form</button>
 
 
   <div align="left">
-    <form name="form" method="post" action="prj_f_list_1.asp" target="flist">
-    <input type="hidden" name="user_pj" value="kimys3">
-    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="32" width="1160">
-        <tr>
-            <td class="tb_bottom" width="22" height="32">
-                <p align="center"><img src="images/bullet_01.gif" width="9" height="18" border="0"></p>
-            </td>
-            <td width="1138" height="32" class="tb_bottom"><b><font size="2" color="#3B608D">예산 실적현황</font></b>
-                        &nbsp;&nbsp;&nbsp;&nbsp;기준년도&nbsp;&nbsp;<input type="text" name="yyyy" value="2023" size="5" maxlength="4">&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value=" 검 색 ">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="http://old-gw.ips.co.kr/common/main/rd_fdg/old_ver/prj_f_frame_1.asp?user_id=kimys3" target="_blank">
-                        [구버전]
-                    </a>
-            </td>
-        </tr>
-    </table>
-    <table border="0" width="1159" height="415" cellspacing="0">
-            <tr>
-            <td class="bdTop_section"  width="33"   height="28">
-                <p align="center"><b><font color="#3B608D">NO</font></b></p>
-            </td>
-            <td class="bdTop_section"  width="76" height="28">
-                <p align="center"><b><font color="#3B608D">사업부</font></b></p>
-            </td>
-            <td class="bdTop_section" width="96" height="28">
-                <p align="center"><b><font color="#3B608D">프로젝트코드</font></b></p>
-            </td>
-            <td class="bdTop_section" width="238" height="28">
-                <p align="center"><b><font color="#3B608D">프로젝트 명</font></b></p>
-            </td>
-            <td class="bdTop_section" width="90" height="28">
-                <p align="center"><b><font color="#3B608D">기초예산</font></b></p>
-            </td>
-            <td class="bdTop_section" width="90" height="28">
-                <p align="center"><b><font color="#3B608D">전용예산</font></b></p>
-            </td>
-            <td class="bdTop_section" width="90" height="28">
-                <p align="center"><b><font color="#3B608D">추가예산</font></b></p>
-            </td>
-            <td width="90" height="28" class="bdTop_section">
-                <p align="center"><b><font color="#3B608D">실행예산</font></b></p>
-            </td>
-            <td width="90" height="28" class="bdTop_section">
-                <p align="center"><b><font color="#3B608D">실적</font></b></p>
-            </td>
-                <td width="90" height="28" class="bdTop_section">
-                    <p align="center"><b><font color="#3B608D">잔액</font></b></p>
-                </td>
-                    <td width="154" height="28" class="bdTop_section">
-                        <p align="left"><b><font color="#3B608D">&nbsp;&nbsp;&nbsp;비율 &nbsp;&nbsp;&nbsp;</font></b></p>
-                    </td>
-            </tr>
-        <tr>
-            <td class="bdTop_line" width="1157" height="1" colspan="11"></td>
-        </tr>
-        <tr>
-            <td class="bdTop_shadow" width="1157" height="2" colspan="11"></td>
-        </tr>
-            <tr>
-                <td class="tb_mid4" width="1157" height="359" colspan="11" align="left" valign="top">
-                    <p align="left">
-                    <iframe src="prj_f_list_1.asp" name="flist"  width="1146" height="353" frameborder="0"></iframe>
-                    </p>
-                </td>
-            </tr>
-        <tr>
-            <td width="33" height="23" class="tb_bottom">
-                <p align="center">&nbsp;</p>
-            </td>
-                <td width="76" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="96" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="238" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="90" height="23" class="tb_bottom">&nbsp;</td>
-                <td width="154" height="23" class="tb_bottom">
-                    <p align="center">&nbsp;</p>
-                </td>
-        </tr>
-    </table>
-    </form>
+   
+        <table id="products" border="1">
+            <caption>product list
+              <form action="" id="setRows">
+                <p>
+                  showing
+                  <input type="text" name="rowPerPage" value="5">
+                  item per page
+                </p>
+              </form>
+          
+            </caption>
+          
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Category</th>
+                <th>Product</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Clothing</td>
+                <td>Jacket</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>life</td>
+                <td>dish</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Clothing</td>
+                <td>shocks</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Clothing</td>
+                <td>sports</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>shoes</td>
+                <td>nike</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>shoes</td>
+                <td>addidas</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Bags</td>
+                <td>backpack</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Clothing</td>
+                <td>Jacket</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>shoes</td>
+                <td>bonie</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Clothing</td>
+                <td>Jacket</td>
+              </tr>
+            </tbody>
+          
+          </table>
+    
     </div>
 
 
 
-<!--끝 메인 페이지----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
 
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
+  <script type="text/javascript">
+
+//function myFunction() {
+  //    var $setRows = $("#myForm");
+  $(document).ready(function(){    
+       alert("Helssslo, world!");
+           //  $('#setRows').submit();
+  
+     // $("#setRows").trigger("submit");
+    });
+        // var $setRows = $('#setRows');
+      
+
+  // $setRows.submit(function(e) {
+    $('#setRows').submit(function(e) {
+        alert("Hello, world!"+typeof e);
+        console.log("Hello, world!");
+
+
+         // e.preventDefault();
+      var rowPerPage = $('[name="rowPerPage"]').val() * 1;// 1 을  곱하여 문자열을 숫자형로 변환
+    
+        //    console.log(typeof rowPerPage);
+    
+      var zeroWarning = 'Sorry, but we cat\'t display "0" rows page. + \nPlease try again.'
+      if (!rowPerPage) {
+        alert(zeroWarning);
+        return;
+      }
+      $('#nav').remove();
+      var $products = $('#products');
+    
+      $products.after('<div id="nav">');
+    
+    
+      var $tr = $($products).find('tbody tr');
+      var rowTotals = $tr.length;
+        //  console.log(rowTotals);
+    
+      var pageTotal = Math.ceil(rowTotals/ rowPerPage);
+      var i = 0;
+    
+      for (; i < pageTotal; i++) {
+        $('<a href="#"></a>')
+            .attr('rel', i)
+            .html(i + 1)
+            .appendTo('#nav');
+      }
+    
+      $tr.addClass('off-screen')
+          .slice(0, rowPerPage)
+          .removeClass('off-screen');
+    
+      var $pagingLink = $('#nav a');
+      $pagingLink.on('click', function (evt) {
+        evt.preventDefault();
+        var $this = $(this);
+        if ($this.hasClass('active')) {
+          return;
+        }
+        $pagingLink.removeClass('active');
+        $this.addClass('active');
+    
+        // 0 => 0(0*4), 4(0*4+4)
+        // 1 => 4(1*4), 8(1*4+4)
+        // 2 => 8(2*4), 12(2*4+4)
+        // 시작 행 = 페이지 번호 * 페이지당 행수
+        // 끝 행 = 시작 행 + 페이지당 행수
+    
+        var currPage = $this.attr('rel');
+        var startItem = currPage * rowPerPage;
+        var endItem = startItem + rowPerPage;
+    
+        $tr.css('opacity', '0.0')
+            .addClass('off-screen')
+            .slice(startItem, endItem)
+            .removeClass('off-screen')
+            .animate({opacity: 1}, 300);
+    
+      });
+    
+      $pagingLink.filter(':first').addClass('active');
+    
+    });
+  
+ // });
+  //  alert("dddd");
+  
+   // setTimeout(function() {
+ // setRows.submit();
+//  }, 1000); // 1초 후에 실행
+
+   // const submitBtn = document.getElementById("submit-btn");
+
+   // submitBtn.addEventListener("click", function() {
+  //      console.log("sdfdsf");
+    //    alert("sdfsdf");
+   // setRows.submit();
+ //   });
+
+  //  $setRows.submit(); 
+  
+
+
+</script>
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

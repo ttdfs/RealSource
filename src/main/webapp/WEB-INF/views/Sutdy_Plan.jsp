@@ -5,6 +5,10 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <!DOCTYPE html>
 <html lang="en">
+ 
+
+
+
 
 <head>
 
@@ -206,7 +210,7 @@
 
 
   <div align="left">
-    <form name="form"   method="post" action="s_sch_s_list.asp">
+    <form name="form"   method="post" action="Sutdy_Plan">
     <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="1127">
                 <tr>
             <td class="tb_bottom" width="22" height="37">
@@ -313,7 +317,7 @@
                                                           &nbsp;<input type="text" name="str_s_title_s" size="20">
                                 </td>
                                 <td width="64" height="26">
-                                    <p align="center">                            	            계획월</p>
+                                    <p align="center">                            	            </p>
                                 </td>
                                 <td width="78" height="26">&nbsp;&nbsp;</td>
                                 <td width="62" height="26">&nbsp;</td>
@@ -331,16 +335,16 @@
                         <p align="center"><b><font color="#3B608D">NO</font></b></p>
                     </td>
                     <td width="92" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">계획일</font></b></p>
+                        <p align="center"><b><font color="#3B608D">조직키</font></b></p>
                     </td>
                     <td width="108" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">계획시간</font></b></p>
+                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
                     </td>
                     <td width="151" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">장소</font></b></p>
+                        <p align="center"><b><font color="#3B608D">조직코드</font></b></p>
                     </td>
                     <td width="49" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">분류</font></b></p>
+                        <p align="center"><b><font color="#3B608D">부서</font></b></p>
                     </td>
                     <td width="350" height="26" class="bdTop_section">
                         <p align="center"><b><font color="#3B608D">학습제목</font></b></p>
@@ -349,10 +353,10 @@
                         <p align="center"><b><font color="#3B608D">학습조직명</font></b></p>
                     </td>
                     <td class="bdTop_section" width="115" height="26">
-                        <p align="center"><b><font color="#3B608D">소속팀</font></b></p>
+                        <p align="center"><b><font color="#3B608D">사용여부</font></b></p>
                     </td>
                     <td class="bdTop_section" width="65" height="26">
-                        <p align="center"><b><font color="#3B608D">진행자</font></b></p>
+                        <p align="center"><b><font color="#3B608D">입력ID</font></b></p>
                     </td>
                 </tr>
         <tr>
@@ -385,10 +389,57 @@
 
 
          <%@ page import="java.sql.*" %>
+         <%@ page import="java.util.ArrayList" %>
+         <%@ page import="java.util.HashMap" %>
+         <%@ page import="java.util.List" %>
+         <%@ page import="java.util.Map" %>
+         
+         <%@ page import="java.text.SimpleDateFormat,java.util.Date"%>
+
+         <%
+         final int ROWSIZE = 14;  // 한페이지에 보일 게시물 수
+         final int BLOCK = 5; // 아래에 보일 페이지 최대개수 1~5 / 6~10 / 11~15 식으로 5개로 고정
+     
+         int pg = 1; //기본 페이지값
+         
+         if(request.getParameter("pg")!=null) { //받아온 pg값이 있을때, 다른페이지일때
+             pg = Integer.parseInt(request.getParameter("pg")); // pg값을 저장
+         }
+         
+         int start = (pg*ROWSIZE) - (ROWSIZE-1); // 해당페이지에서 시작번호
+         int end = (pg*ROWSIZE); // 해당페이지에서 끝번호
+         
+         int allPage = 0; // 전체 페이지수
+         
+         int startPage = ((pg-1)/BLOCK*BLOCK)+1; // 시작블럭숫자 (1~5페이지일경우 1, 6~10일경우 6)
+         int endPage = ((pg-1)/BLOCK*BLOCK)+BLOCK; // 끝 블럭 숫자 (1~5일 경우 5, 6~10일경우 10)
+     
+         int total = 0;
+         
+         System.out.println("request 객체에 담긴 사업부 이름: " + request.getParameter("str_s_saubu_s"));
+         System.out.println("request 객체에 담긴 분류 이름: " + request.getParameter("str_s_kind_s"));
+         System.out.println("request 객체에 담긴 진행자 이름: " + request.getParameter("leader_nm_s"));
+         System.out.println("request 객체에 담긴 진행자 이름: " + request.getParameter("str_s_title_s"));
+         System.out.println("기본 페이지값 pg: " + pg + "개");
+         System.out.println("해당페이지에서 시작번호 start : " + start + "번호");
+         System.out.println("해당페이지에서 끝 번호 end: " + end + "번호");
+         System.out.println("1 총 게시물 : " + total + "개");
+         System.out.println("2 총 게시물 : " + total + "개");
+         System.out.println("3 총 게시물 : " + total + "개");
+         System.out.println("4 총 게시물 : " + total + "개");
+
+
+         %>
+
+
          <%
              Connection conn = null;
              Statement stmt = null;
              ResultSet rs = null;
+        
+
+             Connection conn2 = null;
+      
          
              try {
                  // JDBC 드라이버 클래스 로드
@@ -401,53 +452,174 @@
          
                  // 데이터베이스 연결 생성
                  conn = DriverManager.getConnection(url, user, password);
-         
-                 // SQL 쿼리 실행
-                 String sql = " select  str_o_nm,str_o_saubu,str_o_kind,str_o_b_code,str_o_lder_code,str_o_lder_nm,insrt_dt,str_o_key,str_o_key from STR_ORG_MAST";
-                 stmt = conn.createStatement();
-                 rs = stmt.executeQuery(sql);
-         
-                 // 결과 출력
-          
-                 
-                     
-                   int i = 0;
-                 while (rs.next()) {
-                            i =i + 1;
-       
-                           out.println("<tr>");
-                               out.println("<td align='center'>" + i + "</td>");                                          
-                              
-                               out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getString("str_o_nm") + "</td>");
-                               out.println("<td align='center' width='317' height='1' class='bdTop_shadow'>" + rs.getString("str_o_saubu") + "</td>");
-                               out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_kind") + "</td>");
-                               out.println("<td align='center' width='104' height='1' class='bdTop_shadow'>" + rs.getString("str_o_b_code") + "</td>");
-                               out.println("<td align='center' width='53' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_code") + "</td>");
-                               out.println("<td align='center' width='59' height='1' class='bdTop_shadow'>" + rs.getString("str_o_lder_nm") + "</td>");
-                               out.println("<td align='center' width='89' height='1' class='bdTop_shadow'>" + rs.getString("insrt_dt") + "</td>");
-                               out.println("<td align='center' width='52' height='1' class='bdTop_shadow'>" + rs.getInt("str_o_key") + "</td>");
-                               out.println("</tr>");
-                
-                   //     out.println(rs.getString("minor_cd") + "/////////////////////// " + rs.getString("minor_nm"));
-                 }
-       
+               
+                 //////////총 게시물 수 구하기 //////////////////////////////////////////////////////////////////////////////////////////////////////
+                 Statement stmt2 = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                 String sqlCount = "SELECT COUNT(*) FROM STR_ORG_MAST";
+	             ResultSet rs2 = stmt2.executeQuery(sqlCount);
+		
+	            	if(rs2.next()){
+		            	total = rs2.getInt(1);
+	            	}
+                   
+                    allPage = (int)Math.ceil(total/(double)ROWSIZE);
+		
+                    if(endPage > allPage) {
+                        endPage = allPage;
+                    }
+                    
+                    System.out.println("총 게시물 : " + total + "개");
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             
+
+         // SQL 쿼리 실행
+                
+        //     String sql = "SELECT * FROM " +
+        //     "(SELECT ROW_NUMBER() OVER(ORDER BY str_o_nm) AS rownum11, str_o_nm, str_o_saubu, str_o_kind, str_o_b_code, str_o_lder_code, str_o_lder_nm, insrt_dt, str_o_key " +
+        //     "FROM STR_ORG_MAST) t " +
+        //     "WHERE t.rownum11 BETWEEN 1 AND 15";
+
+             String sql = "SELECT * FROM " +
+             "(SELECT ROW_NUMBER() OVER(ORDER BY str_o_nm) AS rownum11, str_o_nm, str_o_saubu, str_o_kind, str_o_b_code, str_o_lder_code, str_o_lder_nm, insrt_dt, str_o_key " +
+             "FROM STR_ORG_MAST) t " +
+             "WHERE t.rownum11 BETWEEN ? AND ?"; 
+             
+             //stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+               
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             pstmt.setInt(1, start);
+           pstmt.setInt(2, end);
+         
+              System.out.println("조회의 시작 Start 번호 : " + start + "번");
+              System.out.println("조회의 시작 endPage 번호 : " + end + "번");
+
+
+             //  pstmt.setInt(1, 1);
+            //   pstmt.setInt(2, 15);
+               rs = pstmt.executeQuery();
+
+
+               
+
+
+               //  rs = stmt.executeQuery(sql);
+         
+              
+                if(total==0) {
+           
+                        out.println("<tr align='center' bgcolor='#FFFFFF' height='30'>");
+                        out.println("<td colspan='6'>등록된 글이 없습니다.</td>");
+                        out.println("</tr>");
+           
+                     } else { 
+
+
+                        while(rs.next()) {
+                            String idx = rs.getString(1);
+                            String name = rs.getString(2);
+                            String title = rs.getString(3);
+                            String time = rs.getString(4);
+                            String hit = rs.getString(5);
+                            String indent = rs.getString(6);
+                           
+                            Date date = new Date();
+                            SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
+                            String year = (String)simpleDate.format(date);
+                            String yea = time.substring(0,1);
+
+                            int intx = 5;
+                            
+                     
+                            %>
+                            <tr height="25" align="center">
+                                <td>&nbsp;<%=idx %></td>
+                                <td><%=idx %></td>
+                                <td align="left">
+                                <% 
+
+                                for(int j=0;j<intx;j++){
+                                    %>		&nbsp;&nbsp;&nbsp;<%
+                                        } //for꺼
+                                if(intx!=0){
+                                    %>		<img src='img/reply_icon.gif' />
+                                    <%
+                                        } //if꺼 
+                                    %>
+                                        <a href="view.jsp?idx=<%=idx%>&pg=<%=pg%>"><%=title %></a>
+                                    <%
+                                    %>
+                                </td>
+                                <td align="center"><%=name %></td>
+                                <td align="center"><%=yea %></td>
+                                <td align="center"><%=hit %></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                              <tr height="1" bgcolor="#D2D2D2"><td colspan="6"></td></tr>
+                            <% 
+
+                        }  //while꺼 끝
+
+                       }
+                         
+                   
+                    
+          
              } catch (Exception e) {
                  e.printStackTrace();
              } finally {
                  // 리소스 반환
-                 try { rs.close(); } catch (Exception e) { }
-                 try { stmt.close(); } catch (Exception e) { }
-                 try { conn.close(); } catch (Exception e) { }
+                 rs.close(); 
+               //  stmt.close(); 
+                 conn.close(); 
              }
          %>
        
 
 
-
-
-
+         <tr height="1" bgcolor="#82B5DF"><td colspan="6" width="752"></td></tr>
     </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td colspan="4" height="5"></td></tr>
+        <tr>
+          <td align="center">
+              <%
+                  if(pg>BLOCK) {
+              %>
+                  [<a href="Sutdy_Plan?pg=1">◀◀</a>]
+                  [<a href="Sutdy_Plan?pg=<%=startPage-1%>">◀</a>]
+              <%
+                  }
+              %>
+              
+              <%
+                  for(int i=startPage; i<= endPage; i++){
+                      if(i==pg){
+              %>
+                          <u><b>[<%=i %>]</b></u>
+              <%
+                      }else{
+              %>
+                          [<a href="Sutdy_Plan?pg=<%=i %>"><%=i %></a>]
+              <%
+                      }
+                  }
+              %>
+              
+              <%
+                  if(endPage<allPage){
+              %>
+                  [<a href="Sutdy_Plan?pg=<%=endPage+1%>">▶</a>]
+                  [<a href="Sutdy_Plan?pg=<%=allPage%>">▶▶</a>]
+              <%
+                  }
+              %>
+              </td>
+              </tr>
+                <tr align="center">
+         <td><input type=button value="글쓰기" OnClick="window.location='write.jsp'"></td>
+        </tr>
+       </table>
     </form>
     </div>
 
