@@ -4,6 +4,116 @@
     <%@ page import="java.text.SimpleDateFormat" %>
 
 
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Properties"%>
+
+
+
+<%@page import="javax.mail.Transport"%>
+<%@page import="javax.mail.Message"%>
+<%@page import="javax.mail.Address"%>
+<%@page import="javax.mail.internet.InternetAddress"%>
+<%@page import="javax.mail.internet.MimeMessage"%>
+<%@page import="javax.mail.Session"%>
+<%@page import="com.example.product.SMTPAuthenticatior"%>
+<%@page import="javax.mail.Authenticator"%>
+
+
+
+
+
+<%--
+request.setCharacterEncoding("utf-8");
+ 
+//String company	= request.getParameter("company");
+//String name = request.getParameter("name");
+//String from = request.getParameter("from");
+//String to = request.getParameter("to");
+//String email = request.getParameter("email");
+//String number = request.getParameter("number");
+//String subject = request.getParameter("subject");
+//String content = request.getParameter("content");
+
+
+
+
+String company	= "test";
+String name = "test";
+String from = "kimys3@wonik.com";
+String to = "kimys3@wonik.com";
+String email = "kimys3@wonik.com";
+String number = "1";
+String subject = "kimys3@wonik.com";
+String content = "kimys3@wonik.com";
+
+
+Properties p = new Properties(); // 정보를 담을 객체
+ 
+p.put("mail.smtp.host","10.199.2.31"); 
+p.put("mail.smtp.port", "25");
+
+
+p.put("mail.smtp.host","smtp.gmail.com"); 
+p.put("mail.smtp.port", "587");
+
+
+
+p.put("mail.smtp.starttls.enable", "true");
+p.put("mail.smtp.auth", "true");
+p.put("mail.smtp.debug", "true");
+p.put("mail.smtp.socketFactory.port", "25");
+
+
+p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+p.put("mail.smtp.socketFactory.fallback", "false");
+
+ 
+try{
+    Authenticator auth = new SMTPAuthenticatior();
+    Session ses = Session.getInstance(p, auth);
+     
+    ses.setDebug(true);
+    MimeMessage msg = new MimeMessage(ses); // 메일의 내용을 담을 객체  
+
+    msg.setSubject(subject); //  제목 
+
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("업체명 : ");
+    buffer.append(company+" ");
+    buffer.append("담당자 : ");
+    buffer.append(name+" ");    
+    buffer.append("연락처 : ");
+    buffer.append(number+" ");
+    buffer.append("이메일 : ");
+    buffer.append(email+" ");    
+    buffer.append("제목 : ");
+    buffer.append(subject+" ");
+    buffer.append("내용 : ");
+    buffer.append(content+" ");
+	Address fromAddr = new InternetAddress(from);
+	msg.setFrom(fromAddr);	
+
+	Address toAddr = new InternetAddress(to);
+	msg.addRecipient(Message.RecipientType.TO, toAddr); // 받는 사람 
+	
+	msg.setContent(buffer.toString(), "text/html;charset=UTF-8"); // 내용
+	Transport.send(msg); // 전송   
+
+} catch(Exception e){
+    e.printStackTrace();
+    return;
+}
+--%>
+
+
+
+<%
+System.out.println(System.getProperty("java.class.path"));
+
+%>
+
+
 <%
 
     SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -67,6 +177,15 @@ String lastTimeStr = dateFormat.format(new java.util.Date(lastTime));
       <li>마지막 요청 시각 : <%=lastTimeStr%></li>
 
    </ul>
+
+  <nav>
+     <ul>
+          <li><a href="Sutdy_Full_plan"> 홈으로 이동</a></li>
+          <li><a href="Request_Food">네이버</a></li>
+     </ul>
+  </nav>
+  
+
 
 
     <div class="container">
@@ -146,17 +265,29 @@ String lastTimeStr = dateFormat.format(new java.util.Date(lastTime));
            
         $(document).ready(function(){
           
+      //      alert("ready 진입함");
             
-            
+            $("#btnA").click(); // 버튼 클릭 이벤트 자동 발생
+
             $("#btnA").on("click",function() {
-                  alert("11111 CCC 가나다라");
+     //             alert("11111 CCC 가나다라");
                
                  console.log("한글이 나옴");
-                  alert("22222 CCC");
+      //           alert("22222 CCC");
             });
 
+
+            $("#btnA").click(function() {
+       //           alert("2번째 ------>    11111 CCC 가나다라");
+               
+                 console.log("2번째 ------>    한글이 나옴");
+        //          alert("2번째 ------>    22222 CCC");
+            });
+
+            $("#btnA").trigger("click");
+
             $("#btnB").on("click",function() {
-               alert("BBBBBCCC ");
+        //       alert("BBBBBCCC ");
              //  alert(unescape(encodeURIComponent("한글")));
                console.log("CCC CCC");
 

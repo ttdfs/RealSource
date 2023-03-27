@@ -183,9 +183,10 @@
 
 
 
+//회사 로고를 넣고 
+//input user id functions   
 
-
-
+//input table 
 
   <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
@@ -198,75 +199,29 @@
 
   <div align="left">
     <form name="form"   method="post" action="">
-    <table border="0" cellpadding="0" cellspacing="0" bordercolor="white" bordercolordark="white" bordercolorlight="#CCCCCC" bgcolor="white" height="69" width="865">
-                <tr>
-            <td class="tb_bottom" width="22" height="37">
-                <p align="center"><img src="../images/bullet_01.gif" width="9" height="18" border="0"></p>
-            </td>
-            <td width="133" height="37" class="tb_bottom"><b><font size="2" color="#3B608D">개인열람요청현황</font></b>        	</td>
-                    <td width="100" height="37" class="tb_bottom">
-                                    &nbsp;                </td>
-                    <td width="91" height="37" class="tb_bottom">     					
-                                                    &nbsp;</td>
-                    <td width="519" height="37" class="tb_bottom">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td width="865" height="32" class="tb_bottom" colspan="5">
-                        <table cellpadding="0" cellspacing="0" height="26" width="847">
-                            <tr>
-                                <td width="32" height="26">&nbsp;</td>
-                                <td width="73" height="26">
-                                    <p align="center">&nbsp;</p>
-                                </td>
-                                <td width="86" height="26">
-                                                                    &nbsp;
-                                                             </td>
-                                <td width="76" height="26">
-                                    <p align="center">&nbsp;</p>
-                                </td>
-                                <td width="66" height="26">
-                                                                        &nbsp;</td>
-                                <td width="65" height="26">
-                                    <p align="center">&nbsp;</p>
-                                </td>
-                                <td width="78" height="26">
-                                                                    &nbsp; </td>
-                                <td width="82" height="26">
-                                    <p align="center">&nbsp;</p>
-                                </td>
-                                <td width="194" height="26">&nbsp;</td>
-                                <td width="58" height="26">
-                                                                        &nbsp;</td>
-                                <td width="20" height="26">&nbsp;</td>
-                                <td width="17" height="26">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-    
-    </table>
+ 
     <table border="0" width="866" height="84" cellspacing="0">
                 <tr>
-                    <td class="bdTop_section" width="47"   height="26">
-                        <p align="center"><b><font color="#3B608D">NO</font></b></p>
+                    <td  align="center" class="bdTop_section" width="47"   height="26">
+                         <b><font color="#3B608D">NO</font></b> 
                     </td>
-                    <td width="74" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">진행일</font></b></p>
+                    <td  align="center"  width="74" height="26" class="bdTop_section">
+                         <b><font color="#3B608D">진행일</font></b> 
                     </td>
-                    <td width="443" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">학습제목</font></b></p>
+                    <td  align="center"  width="443" height="26" class="bdTop_section">
+                         <b><font color="#3B608D">학습제목</font></b> 
                     </td>
-                    <td width="82" height="26" class="bdTop_section">
-                        <p align="center"><b><font color="#3B608D">열람시작</font></b></p>
+                    <td  align="center"  width="82" height="26" class="bdTop_section">
+                       <b><font color="#3B608D">열람시작</font></b> 
                     </td>
-                    <td class="bdTop_section"  width="82" height="26">
-                        <p align="center"><b><font color="#3B608D">열람종료</font></b></p>
+                    <td  align="center"  class="bdTop_section"  width="82" height="26">
+                         <b><font color="#3B608D">열람종료</font></b> 
                     </td>
-                    <td class="bdTop_section" width="67" height="26">
-                        <p align="center"><b><font color="#3B608D">요청자</font></b></p>
+                    <td  align="center"  class="bdTop_section" width="67" height="26">
+                        <b><font color="#3B608D">요청자</font></b> 
                     </td>
-                    <td class="bdTop_section" width="57" height="26">
-                        <p align="center"><b><font color="#3B608D">상태</font></b></p>
+                    <td  align="center"  class="bdTop_section" width="57" height="26">
+                         <b><font color="#3B608D">상태</font></b> 
                     </td>
                 </tr>
         <tr>

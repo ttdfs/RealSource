@@ -222,10 +222,10 @@
                             <tr>
                                 <td width="13" height="26">&nbsp;</td>
                                 <td width="57" height="26">
-                                    <p align="center">사업부</p>
+                                     사업부 
                                 </td>
                                 <td width="96" height="26">
-                                                                        &nbsp;
+                                                                        
                                                                <select name="str_s_saubu_s" size="1">
                                                                            <option value="">전체</option>
                                                                             
@@ -258,25 +258,25 @@
                                             </select> 			
                                                             </td> 
                                 <td width="50" height="26">
-                                    <p align="center">팀명</p>
+                                    &nbsp;&nbsp;&nbsp;   팀명  
                                 </td>
                                 <td width="132" height="26">
                                                                             &nbsp;<input type="text" name="deptnm_s"  size="10">																
                                                             </td>
                                 <td width="56" height="26">
-                                    <p align="center">진행자</p>
+                                     &nbsp;진행자 
                                 </td>
                                 <td width="85" height="26">
                                                                                         &nbsp;<input type="text" name="leader_nm_s" size="7">
                                                         </td>
                                 <td width="61" height="26">
-                                    <p align="center">제 목</p>
+                                    &nbsp;제 목 
                                 </td>
                                 <td width="173" height="26">&nbsp;
                                                           &nbsp;<input type="text" name="str_s_title_s" size="20">
                                 </td>
                                 <td width="64" height="26">
-                                    <p align="center">계획월</p>
+                                    &nbsp;계획월 
                                 </td>
                                 <td width="78" height="26">&nbsp;<input type="text" name="yyyy_s" value="2023" size="5"></td>
                                 <td width="63" height="26">

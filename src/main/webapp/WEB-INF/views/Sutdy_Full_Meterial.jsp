@@ -219,10 +219,10 @@
                             <tr>
                                 <td width="32" height="26">&nbsp;</td>
                                 <td width="73" height="26">
-                                    <p align="center">사업부</p>
+                                    &nbsp;사업부 
                                 </td>
                                 <td width="86" height="26">
-                                                                        &nbsp;
+                                                                       
                                                                <select name="str_d_saubu_s" size="1">
                                                                            <option value="">전체</option>
                                                                             
@@ -255,10 +255,10 @@
                                             </select> 			
                                                             </td>
                                 <td width="76" height="26">
-                                    <p align="center">분류</p>
+                                    &nbsp;&nbsp;&nbsp;분류 
                                 </td>
                                 <td width="66" height="26">
-                                                                            &nbsp;
+                                                                          
                                                                <select name="str_d_kind_s" size="1">
                                                                                    <option value="">전체</option>
                                                                             
@@ -292,14 +292,14 @@
                                                                
                                             </select> 																		
                                                             </td>
-                                <td width="65" height="26">
-                                    <p align="center">학습조직명</p>
+                                <td width="88" height="26">
+                                    &nbsp;&nbsp;학습조직명 
                                 </td>
                                 <td width="78" height="26">
                                                                                         &nbsp;<input type="text" name="org_nm_s" size="7">
                                                         </td>
                                 <td width="82" height="26">
-                                    <p align="center">제 목</p>
+                                    &nbsp;&nbsp;&nbsp;제 목 
                                 </td>
                                 <td width="194" height="26">&nbsp;
                                                           &nbsp;<input type="text" name="str_d_title_s" size="20">

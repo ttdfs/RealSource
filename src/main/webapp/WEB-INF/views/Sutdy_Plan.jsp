@@ -230,11 +230,11 @@
                         <table cellpadding="0" cellspacing="0" height="26" width="1109">
                             <tr>
                                 <td width="32" height="26">&nbsp;</td>
-                                <td width="73" height="26">
-                                    <p align="center">사업부</p>
+                                <td width="85" height="26">
+                                    사업부
                                 </td>
                                 <td width="80" height="26">
-                                                                        &nbsp;
+                                                                    
                                                                <select name="str_s_saubu_s" size="1">
                                                                            <option value="">전체</option>
                                                                             
@@ -267,10 +267,11 @@
                                             </select> 			
                                                             </td>
                                 <td width="63" height="26">
-                                    <p align="center">분류</p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; 분류
                                 </td>
-                                <td width="79" height="26">
+                                <td width="100" height="26">
                                                                             &nbsp;
+                                                                            
                                                                <select name="str_s_kind_s" size="1">
                                                                                    <option value="">전체</option>
                                                                             
@@ -302,16 +303,16 @@
                                                                             
                                                                         <option value="B0999">공개학습</option>
                                                                
-                                            </select> 																		
+                                            </select> 																
                                                             </td>
                                 <td width="65" height="26">
-                                    <p align="center">진행자</p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;진행자
                                 </td>
                                 <td width="78" height="26">
                                                                                         &nbsp;<input type="text" name="leader_nm_s" size="7">
                                                         </td>
                                 <td width="80" height="26">
-                                    <p align="center">제 목</p>
+                                    &nbsp;&nbsp;&nbsp;   제 목
                                 </td>
                                 <td width="173" height="26">&nbsp;
                                                           &nbsp;<input type="text" name="str_s_title_s" size="20">
@@ -479,11 +480,17 @@
         //     "FROM STR_ORG_MAST) t " +
         //     "WHERE t.rownum11 BETWEEN 1 AND 15";
 
+         //    String sql = "SELECT * FROM " +
+         //    "(SELECT ROW_NUMBER() OVER(ORDER BY str_o_nm) AS rownum11, str_o_nm, str_o_saubu, str_o_kind, str_o_b_code, str_o_lder_code, str_o_lder_nm, insrt_dt, str_o_key " +
+         //    "FROM STR_ORG_MAST) t " +
+         //    "WHERE t.rownum11 BETWEEN ? AND ?"; 
+            
              String sql = "SELECT * FROM " +
-             "(SELECT ROW_NUMBER() OVER(ORDER BY str_o_nm) AS rownum11, str_o_nm, str_o_saubu, str_o_kind, str_o_b_code, str_o_lder_code, str_o_lder_nm, insrt_dt, str_o_key " +
+             "(SELECT ROW_NUMBER() OVER(ORDER BY str_o_nm) AS rownum11, str_o_key , str_o_saubu, str_o_b_code ,  str_o_nm,  str_o_lder_code,  str_o_use_flg, str_o_lder_nm,insrt_id " +
              "FROM STR_ORG_MAST) t " +
              "WHERE t.rownum11 BETWEEN ? AND ?"; 
-             
+
+
              //stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -521,7 +528,15 @@
                             String time = rs.getString(4);
                             String hit = rs.getString(5);
                             String indent = rs.getString(6);
+                            String use_flg = rs.getString(7);
+                            String lder_nm = rs.getString(8);
+                            String insrt_dt = rs.getString(9);
                            
+
+//NO, 조직키, 소속팀, 조직코드, 부서, 학습제목, 학습조직명, 사용여부, 입력ID
+//NO, 소속팀 str_o_nm , 조직코드 str_o_saubu, 부서 str_o_b_code , 학습제목 str_o_nm, 학습조직명 str_o_lder_code, 사용여부 str_o_use_flg, 입력ID str_o_lder_nm
+
+
                             Date date = new Date();
                             SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
                             String year = (String)simpleDate.format(date);
@@ -533,7 +548,7 @@
                             %>
                             <tr height="25" align="center">
                                 <td>&nbsp;<%=idx %></td>
-                                <td><%=idx %></td>
+                                <td><%=name %></td>
                                 <td align="left">
                                 <% 
 
@@ -549,12 +564,15 @@
                                     <%
                                     %>
                                 </td>
-                                <td align="center"><%=name %></td>
-                                <td align="center"><%=yea %></td>
+                                <td align="center"><%=time %></td>
                                 <td align="center"><%=hit %></td>
+                                <td align="center"><%=indent %></td>
+                                <td align="center"><%=use_flg %></td>
+                                <td align="center"><%=lder_nm %></td>
+                                <td align="center"><%=insrt_dt %></td>
                                 <td>&nbsp;</td>
                             </tr>
-                              <tr height="1" bgcolor="#D2D2D2"><td colspan="6"></td></tr>
+                              <tr height="1" bgcolor="#D2D2D2"><td colspan="9"></td></tr>
                             <% 
 
                         }  //while꺼 끝
@@ -576,7 +594,7 @@
        
 
 
-         <tr height="1" bgcolor="#82B5DF"><td colspan="6" width="752"></td></tr>
+         <tr height="1" bgcolor="#82B5DF"><td colspan="9" width="752"></td></tr>
     </table>
 
     <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -617,7 +635,7 @@
               </td>
               </tr>
                 <tr align="center">
-         <td><input type=button value="글쓰기" OnClick="window.location='write.jsp'"></td>
+         
         </tr>
        </table>
     </form>

@@ -220,7 +220,7 @@
                         <table cellpadding="0" cellspacing="0" height="26" width="847">
                             <tr>
                                 <td width="82" height="26">
-                                    <p align="center">제 목</p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;제 목 
                                 </td>
                                 <td width="194" height="26">&nbsp;
                                                           &nbsp;<input type="text" name="str_d_title_s" size="20">

@@ -225,10 +225,10 @@
                         </tr>
                         <tr>
                             <td width="94" height="37" class="tb_mid" bgcolor="#F1F1F1">
-                                <p align="center">사업부</p>
+                                &nbsp;&nbsp;사업부 
                             </td>
                             <td width="161" height="37" bgcolor="white" class="tb_mid" colspan="2">
-                                <p>&nbsp;<select name="saubu" size="1">
+                                &nbsp;   <select name="saubu" size="1">
                                                         <option value="">선택</option>
                                                                 
                                                                                            <option value="S0110">경영전략부문</option>
@@ -257,25 +257,26 @@
                                                                                                      
                                                                                            <option value="S0170">SEC영업2본부</option>
                                                                                   
-                                                                            </select></p>
+                                                                            </select>
                             </td>
                             <td width="100" height="37" bgcolor="#F1F1F1" class="tb_mid">
-                                <p align="center">부서</p>
+                                &nbsp;&nbsp;&nbsp;부서 
+                               
                             </td>
                             <td width="132" height="37" bgcolor="white" class="tb_mid">
                                      &nbsp;<input type="text" name="deptname" size="16" value=""></td>
                             <td width="36" height="37" bgcolor="white" class="tb_mid">
                                 <p align="center">
                                         <a href="javascript:na_open_window('buseo', '../org/org_b_tree.asp', 0, 0, 350, 370, 0, 0, 1, 1, 1)">
-                                             <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                       
                                         </a>
                                 </p>
                             </td>
                             <td width="101" height="37" bgcolor="#F1F1F1" class="tb_mid">
-                                <p align="center">분류</p>
+                                 분류 
                             </td>
                             <td width="127" height="37" bgcolor="white" class="tb_mid">
-                                <p>&nbsp;<select name="b_kind" size="1">
+                                <select name="b_kind" size="1">
                                                         <option value="">선택</option>
                                                                 
                                                                                            <option value="B0020">개발</option>
@@ -306,12 +307,12 @@
                                                                                                      
                                                                                            <option value="B0999">공개학습</option>
                                                                                   
-                                                                            </select></p>
+                                                                            </select>  
                             </td>
                         </tr>
                         <tr>
                             <td width="94" height="19" class="tb_mid" bgcolor="#F1F1F1">
-                                <p align="center">학습조직리더</p>
+                                &nbsp;&nbsp;학습조직리더 
                             </td>
                             <td width="126" height="38" bgcolor="white" class="tb_mid">
                                 <input type="hidden" name="leader_code">
@@ -320,7 +321,7 @@
                             <td width="35" height="38" bgcolor="white" class="tb_mid">
                                 <p align="center">
                                        <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
-                                              <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                             
                                        </a>
                                 </p>
                             </td>
@@ -338,7 +339,7 @@
                             </td>
                             <td width="127" height="89" bgcolor="white" class="tb_mid">&nbsp;
                                    <a href="javascript:na_open_window('buseo', '../popup/iv_m_user_search2.asp', 0, 0, 350, 370, 0, 0, 1, 0, 1)">
-                                      <img src="../img/S_Toolbar.gif" width="16" height="16" border="0">
+                                   
                                     </a>
                             </td>
                         </tr>

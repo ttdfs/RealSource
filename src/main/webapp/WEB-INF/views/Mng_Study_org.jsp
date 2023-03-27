@@ -214,45 +214,59 @@
           rs = stmt.executeQuery(sql);
   
           // 결과 출력
+          %>
+          <tr>
+            <td class="bdTop_line" width="30" height="5"></td>
+            <td width="317" height="1" class="bdTop_line"></td>
+            <td width="59" height="1" class="bdTop_line"></td>
+            <td width="104" height="1" class="bdTop_line"></td>
+            <td width="53" height="1" class="bdTop_line"></td>
+            <td width="59" height="1" class="bdTop_line"></td>
+            <td width="89" height="1" class="bdTop_line"></td>
+            <td width="52" height="1" class="bdTop_line"></td>
+            <td width="85" height="1" class="bdTop_line"></td>
+    </tr>
+    
 
+    <%
           out.println("<table border='0' width='866' height='84' cellspacing='0'>");
           out.println("<div align='left'>");
           out.println("<form name='form'   method='post' action=''>");
 
           out.println("<tr>");
           out.println("<td class='bdTop_section' width='30'   height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>NO</font></b></p>");
+          out.println("<b><font color='#3B608D'>NO</font></b>");
           out.println("</td>");
-          out.println("<td width='317' height='26' class='bdTop_section'>");
-          out.println("<p align='center'><b><font color='#3B608D'>학습조직명</font></b></p>");
+          out.println("<td align='center' width='317' height='26' class='bdTop_section'>");
+          out.println("<b><font color='#3B608D'>학습조직명</font></b>");
           out.println("</td>");
-          out.println("<td class='bdTop_section'  width='59' height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>사업부</font></b></p>");
+          out.println("<td align='center' class='bdTop_section'  width='59' height='26'>");
+          out.println("<b><font color='#3B608D'>사업부</font></b>");
           out.println("</td>");
-          out.println("<td class='bdTop_section' width='104' height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>소속팀</font></b></p>");
+          out.println("<td align='center' class='bdTop_section' width='104' height='26'>");
+          out.println("<b><font color='#3B608D'>소속팀</font></b>");
           out.println("</td>");
-          out.println("<td class='bdTop_section' width='53' height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>분류</font></b></p>");
+          out.println("<td align='center' class='bdTop_section' width='53' height='26'>");
+          out.println("<b><font color='#3B608D'>분류</font></b>");
           out.println("</td>");
-          out.println("<td class='bdTop_section' width='59' height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>리더</font></b></p>");
+          out.println("<td align='center' class='bdTop_section' width='59' height='26'>");
+          out.println("<b><font color='#3B608D'>리더</font></b>");
           out.println("</td>");
-          out.println("<td class='bdTop_section' width='89' height='26'>");
-          out.println("<p align='center'><b><font color='#3B608D'>개설일</font></b></p>");
+          out.println("<td align='center' class='bdTop_section' width='89' height='26'>");
+          out.println("<b><font color='#3B608D'>개설일</font></b>");
           out.println("</td>");
-          out.println("<td width='52' height='26' class='bdTop_section'>");
-          out.println("<p align='center'><b><font color='#3B608D'>자료수</font></b></p>");
+          out.println("<td align='center' width='52' height='26' class='bdTop_section'>");
+          out.println("<b><font color='#3B608D'>자료수</font></b>");
           out.println("</td>");
-          out.println("<td width='85' height='26' class='bdTop_section'>");
-          out.println("<p align='center'><b><font color='#3B608D'>구성원</font></b></p>");
+          out.println("<td align='center' width='85' height='26' class='bdTop_section'>");
+          out.println("<b><font color='#3B608D'>구성원</font></b>");
           out.println("</td>");
           out.println("</tr>");
      %>
 
      <tr>
-        <td class="bdTop_line" width="30" height="1"></td>
-        <td width="317" height="1" class="bdTop_line"></td>
+        <td class="bdTop_line" width="30" height="0"></td>
+        <td width="317" height="0" class="bdTop_line"></td>
         <td width="59" height="1" class="bdTop_line"></td>
         <td width="104" height="1" class="bdTop_line"></td>
         <td width="53" height="1" class="bdTop_line"></td>
@@ -261,17 +275,7 @@
         <td width="52" height="1" class="bdTop_line"></td>
         <td width="85" height="1" class="bdTop_line"></td>
 </tr>
-<tr>
-    <td class="bdTop_shadow" width="30" height="2"></td>
-<td width="317" height="2" class="bdTop_shadow"></td>
-<td width="59" height="2" class="bdTop_shadow"></td>
-<td width="104" height="2" class="bdTop_shadow"></td>
-<td width="53" height="2" class="bdTop_shadow"></td>
-<td width="59" height="2" class="bdTop_shadow"></td>
-<td width="89" height="2" class="bdTop_shadow"></td>
-<td width="52" height="2" class="bdTop_shadow"></td>
-<td width="85" height="2" class="bdTop_shadow"></td>
-</tr> 
+
 
      <%
     
